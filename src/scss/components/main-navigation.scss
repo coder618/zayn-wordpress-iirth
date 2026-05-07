@@ -1,0 +1,19 @@
+.desktop-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #fff;
+    .top-message {
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: 5%;
+        background-color: var(--color-accent);
+        color: #fff;
+        text-align: center;
+        padding: 12px 10px;
+        border-radius: 0rem;
+        font-family: var(--font-body);
+    }
+}

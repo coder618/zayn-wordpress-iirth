@@ -1,0 +1,55 @@
+footer {
+    padding-top: 64px;
+    *,
+    a {
+        color: var(--color-primary);
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 5%;
+    }
+    h3 {
+        // font-family: "Brooklyn", sans-serif;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 10%;
+        margin-bottom: 24px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    ul {
+        a {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 5%;
+            color: var(--color-primary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+    }
+
+    .copyright-section {
+        background-color: #eae6e4;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .left-part {
+            display: flex;
+            align-items: center;
+        }
+        .site-name {
+            margin-right: 48px;
+        }
+    }
+}

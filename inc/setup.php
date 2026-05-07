@@ -39,7 +39,9 @@ if ( ! function_exists( 'ahadul_setup' ) ) :
         // Register navigation menus.
         register_nav_menus( array(
             'primary' => esc_html__( 'Primary Menu', 'ahadul' ),
-            'footer'  => esc_html__( 'Footer Menu', 'ahadul' ),
+            'footer_1'  => esc_html__( 'Footer Menu (Shop)', 'ahadul' ),
+            'footer_2'  => esc_html__( 'Footer Menu (General)', 'ahadul' ),
+            'footer_3'  => esc_html__( 'Footer Menu (Legal)', 'ahadul' ),
         ) );
     }
 endif;
