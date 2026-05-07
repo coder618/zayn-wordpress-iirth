@@ -1,0 +1,8 @@
+{
+  "tailwindCSS.includeLanguages": {
+    "php": "html"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "class=[\"']([^\"']*)[\"']"
+  ]
+}

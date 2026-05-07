@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.cdnfonts.com/css/d-din");
+@import url("https://fonts.cdnfonts.com/css/brooklyn");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --color-primary: #a41a23;
+    --color-secondary: #f3920a;
+    --color-accent: #f8b234;
+    --font-heading: "Montserrat", sans-serif;
+    --font-body: "Overpass", sans-serif;
+    --font-accent: "Lexend", sans-serif;
+    --font-signature: "Sacramento", cursive;
+    --font-din-ot: "D-DIN", sans-serif;
+    --font-brooklyn: "Brooklyn", sans-serif;
+  }
+}
+@layer components {
+  .container {
+    margin-inline: auto;
+    padding-inline: 20px;
+    max-width: 1140px;
+  }
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 0rem;
+    padding: 16px 24px;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.25;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    letter-spacing: 0.1em;
+    user-select: none;
+    border: 1px solid transparent;
+    font-family: var(--font-heading);
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    will-change: background-color, border-color, box-shadow;
+    box-shadow: -8px 8px 0px #4d0a0d;
+  }
+  .btn-primary:hover {
+    box-shadow: 0px 0px 0px 4px var(--color-secondary);
+  }
+}
+/* Add your custom SCSS here */
+body .site-content {
+  min-height: 50vh;
+}
+
+.mobile-menu-overlay {
+  background-color: var(--color-primary);
+}
+
+.carousel-black-container .carousel-black-cell {
+  width: 25%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.carousel-black-container .carousel-black-cell img {
+  object-fit: cover;
+}
+.carousel-black-container .img-wrapper {
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.carousel-black-container .img-wrapper img {
+  width: 100%;
+  height: 350px;
+}
+.carousel-black-container .img-wrapper.even img {
+  height: 500px !important;
+}
+@media screen and (max-width: 768px) {
+  .carousel-black-container .carousel-black-cell {
+    width: 85%;
+    height: 400px;
+  }
+  .carousel-black-container .img-wrapper {
+    padding: 0 10px;
+  }
+  .carousel-black-container .img-wrapper img {
+    height: 350px;
+  }
+  .carousel-black-container .img-wrapper.even img {
+    height: 400px !important;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

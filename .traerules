@@ -1,0 +1,8 @@
+# Agent Instructions
+
+For this project, please follow these instructions:
+
+1. Whenever adding new functionality, add it in a separate file in the `/inc` folder and require it in `functions.php`.
+2. For implementing CSS styles, try to use Tailwind CSS.
+3. For creating a new component, register the component in the `/inc/blocks.php` file and add the render file inside the `/components` folder use Carbon fields to create components.
+4. For create meta fields, theme settings use Carbon fields.
