@@ -41,6 +41,7 @@ function ahadul_register_custom_blocks() {
         ->add_fields( array(
             Field::make( 'complex', 'home_banner_items', __( 'Banner Items', 'ahadul' ) )
                 ->add_fields( array(
+                    Field::make( 'image', 'image', __( 'Image', 'ahadul' ) ),
                     Field::make( 'text', 'title', __( 'Title', 'ahadul' ) ),
                     Field::make( 'textarea', 'detail', __( 'Detail', 'ahadul' ) ),
                     Field::make( 'text', 'btn_title', __( 'Button Title', 'ahadul' ) ),
