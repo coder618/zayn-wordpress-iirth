@@ -53,4 +53,25 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/home-banner' );
         } );
+
+    Block::make( __( 'Services CTA Home 1', 'ahadul' ) )
+        ->set_icon( 'megaphone' )
+        ->set_description( __( 'A services call-to-action block with background image and button.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'services' ), __( 'cta' ), __( 'home' ) ] )
+        ->add_fields( array(
+            Field::make( 'text', 'title', __( 'Title', 'ahadul' ) ),
+
+            Field::make( 'complex', 'services_cta_items', __( 'CTA Items', 'ahadul' ) )
+                ->add_fields( array(
+                    Field::make( 'image', 'bg_image', __( 'Background Image', 'ahadul' ) ),
+                    Field::make( 'text', 'btn_title', __( 'Button Title', 'ahadul' ) ),
+                    Field::make( 'text', 'btn_link', __( 'Button Link', 'ahadul' ) ),
+                ) )
+                ->set_layout( 'tabbed-horizontal' )
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/services-cta-home' );
+        } );
 }
