@@ -572,6 +572,10 @@ footer .copyright-section .site-name {
      object-fit: cover;
 }
 
+.product-listing {
+  margin-bottom: 100px;
+}
+
 .product-listing h2 {
   font-size: 28px;
   font-weight: 600;
@@ -1245,10 +1249,6 @@ video {
   z-index: 20;
 }
 
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
 .clear-both {
   clear: both;
 }
@@ -1272,10 +1272,6 @@ video {
 
 .mb-8 {
   margin-bottom: 2rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .mt-8 {
@@ -1380,15 +1376,6 @@ video {
   border-width: 1px;
 }
 
-.border-t {
-  border-top-width: 1px;
-}
-
-.border-gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
-}
-
 .border-white\/50 {
   border-color: rgb(255 255 255 / 0.5);
 }
@@ -1437,10 +1424,6 @@ video {
 
 .pl-\[20px\] {
   padding-left: 20px;
-}
-
-.pt-12 {
-  padding-top: 3rem;
 }
 
 .text-left {
@@ -1605,10 +1588,6 @@ h6 {
 }
 
 @media (min-width: 1024px) {
-  .lg\:col-span-2 {
-    grid-column: span 2 / span 2;
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

@@ -459,6 +459,9 @@ footer .copyright-section .site-name {
   object-fit: cover;
 }
 
+.product-listing {
+  margin-bottom: 100px;
+}
 .product-listing h2 {
   font-size: 28px;
   font-weight: 600;
