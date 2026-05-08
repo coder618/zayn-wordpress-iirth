@@ -40,8 +40,20 @@ if ( post_password_required() ) {
     <div class="top-part-gallery-title-with-detail">
         <div class="left-part">
             <?php
-				get_template_part( 'components/single-product-page/product-gallery' );
+				$main_image_id  = $product->get_image_id();
+				$attachment_ids = $product->get_gallery_image_ids();
 				
+				$all_image_ids = array();
+				if ( $main_image_id ) {
+					$all_image_ids[] = $main_image_id;
+				}
+				if ( $attachment_ids ) {
+					$all_image_ids = array_merge( $all_image_ids, $attachment_ids );
+				}
+
+				get_template_part( 'components/single-product-page/product-gallery', null, [
+                    "image_ids" => $all_image_ids
+                ] );
 			?>
         </div>
         <div class="right-part">

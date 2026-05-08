@@ -7,27 +7,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-global $product;
-
-if ( ! is_a( $product, 'WC_Product' ) ) {
-	return;
-}
-
 // Enqueue Flickity assets
 wp_enqueue_style( 'flickity-css' );
 wp_enqueue_script( 'flickity-js' );
 
-// Get Image IDs
-$main_image_id  = $product->get_image_id();
-$attachment_ids = $product->get_gallery_image_ids();
-
-$all_image_ids = array();
-if ( $main_image_id ) {
-	$all_image_ids[] = $main_image_id;
-}
-if ( $attachment_ids ) {
-	$all_image_ids = array_merge( $all_image_ids, $attachment_ids );
-}
+// Get Image IDs from args
+$all_image_ids = isset( $args['image_ids'] ) && is_array( $args['image_ids'] ) ? $args['image_ids'] : array();
 
 if ( empty( $all_image_ids ) ) {
 	// Fallback to placeholder if no images
