@@ -11,7 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $product_id = isset( $args['id'] ) ? $args['id'] : get_the_ID();
-$product = wc_get_product( $product_id );
+
+$product = wc_get_product( intval( $product_id ));
 
 if ( ! is_a( $product, 'WC_Product' ) ) {
     return;

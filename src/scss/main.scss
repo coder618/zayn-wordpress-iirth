@@ -3,10 +3,11 @@
 @use "components/footer";
 @use "components/banner-home";
 @use "components/services-cta-home";
-@use "pages/single-product-page";
 @use "components/product-listing";
 @use "components/all-product";
 @use "components/shop-page-banner";
+@use "pages/single-treatment-page";
+@use "pages/single-product-page";
 
 @tailwind base;
 @tailwind components;

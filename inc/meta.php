@@ -41,12 +41,22 @@ function zayn_register_custom_meta_fields() {
                 ->set_attribute( 'placeholder', 'https://...' ),
             Field::make( 'media_gallery', 'treatment_gallery', __( 'Gallery', 'zayn' ) )
                 ->set_type( array( 'image' ) ),
-            Field::make( 'association', 'treatment_used_products', __( 'Used Products', 'zayn' ) )
-                ->set_types( array(
-                    array(
-                        'type'      => 'post',
-                        'post_type' => 'product',
-                    )
-                ) ),
+            Field::make( 'multiselect', 'treatment_used_products', __( 'Used Products', 'zayn' ) )
+                ->set_options( function() {
+                    $options = array();
+                    $products = get_posts( array(
+                        'post_type'   => 'product',
+                        'post_status' => 'publish',
+                        'numberposts' => -1,
+                    ) );
+                    
+                    if ( ! empty( $products ) ) {
+                        foreach ( $products as $product ) {
+                            $options[ $product->ID ] = $product->post_title;
+                        }
+                    }
+                    
+                    return $options;
+                } ),
         ) );
 }
