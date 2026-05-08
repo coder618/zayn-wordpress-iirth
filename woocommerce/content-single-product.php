@@ -62,9 +62,9 @@ if ( post_password_required() ) {
                     <?php woocommerce_template_single_add_to_cart(); ?>
                 </div>
                 <div class="anchor-links-wrapper">
-                    <button>Product Details</button>
-                    <button>How to Use</button>
-                    <button>INGREDIENTS</button>
+                    <button data-target-tab="tab-details">Product Details</button>
+                    <button data-target-tab="tab-how-to-use">How to Use</button>
+                    <button data-target-tab="tab-ingredients">INGREDIENTS</button>
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ if ( post_password_required() ) {
         </div>
     </div>
 
-    <div class="products-tabs-wrapper w-full clear-both">
+    <div class="products-tabs-wrapper w-full clear-both" id="products-tabs-wrapper">
         <?php
 			get_template_part( 'components/single-product-page/products-tabs' );
 		?>

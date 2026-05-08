@@ -72,20 +72,47 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = tabsContainer.querySelectorAll('.tab-btn');
     const tabPanes = tabsContainer.querySelectorAll('.tab-pane');
 
+    function switchTab(targetId) {
+        // Remove active class from all buttons and panes
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabPanes.forEach(pane => pane.classList.remove('active'));
+
+        // Add active class to corresponding button
+        const targetBtn = tabsContainer.querySelector(`.tab-btn[data-tab="${targetId}"]`);
+        if (targetBtn) {
+            targetBtn.classList.add('active');
+        }
+
+        // Show corresponding pane
+        const targetPane = document.getElementById(targetId);
+        if (targetPane) {
+            targetPane.classList.add('active');
+        }
+    }
+
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons and panes
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            tabPanes.forEach(pane => pane.classList.remove('active'));
+            switchTab(button.getAttribute('data-tab'));
+        });
+    });
 
-            // Add active class to clicked button
-            button.classList.add('active');
-
-            // Show corresponding pane
-            const targetId = button.getAttribute('data-tab');
-            const targetPane = document.getElementById(targetId);
-            if (targetPane) {
-                targetPane.classList.add('active');
+    // Handle anchor links from the product details section
+    const anchorLinks = document.querySelectorAll('.anchor-links-wrapper button[data-target-tab]');
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('data-target-tab');
+            
+            // Switch tab
+            switchTab(targetId);
+            
+            // Scroll to tabs wrapper
+            const tabsWrapper = document.getElementById('products-tabs-wrapper');
+            if (tabsWrapper) {
+                // Smooth scroll with some offset for header if needed
+                const yOffset = -50; 
+                const y = tabsWrapper.getBoundingClientRect().top + window.scrollY + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
             }
         });
     });
