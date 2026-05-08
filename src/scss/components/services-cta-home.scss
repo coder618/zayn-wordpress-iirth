@@ -1,0 +1,36 @@
+.services-cta-home-section {
+    .cta-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .cta-item {
+        min-height: 280px;
+        position: relative;
+        padding: 20px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            padding: 8px 20px;
+            letter-spacing: 5%;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 20px;
+            z-index: 2;
+            position: relative;
+        }
+    }
+}

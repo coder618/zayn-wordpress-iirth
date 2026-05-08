@@ -2,6 +2,7 @@
 @use "components/main-navigation";
 @use "components/footer";
 @use "components/banner-home";
+@use "components/services-cta-home";
 
 @tailwind base;
 @tailwind components;
@@ -12,6 +13,7 @@
         --color-primary: #006d57;
         --color-secondary: #81412a;
         --color-accent: #051c18;
+        --color-gray: #eae6e4;
 
         --font-din-ot: "D-DIN", sans-serif;
         --font-brooklyn: "Brooklyn", sans-serif;
@@ -28,39 +30,17 @@
         max-width: 1320px;
         width: 1320px;
     }
-
-    .btn-primary {
-        background-color: var(--color-primary);
-        color: #fff;
-        border-radius: 0rem;
-        padding: 16px 24px;
-        font-size: 25px;
-        font-weight: 900;
-        line-height: 1.25;
-        font-style: italic;
-        text-align: center;
+    .btn-gray {
+        color: var(--color-primary);
+        background-color: var(--color-gray);
         text-transform: uppercase;
-        vertical-align: middle;
-        letter-spacing: 0.1em;
-        user-select: none;
-        border: 1px solid transparent;
-        font-family: var(--font-heading);
-
-        transition:
-            background-color 0.15s ease-in-out,
-            border-color 0.15s ease-in-out,
-            box-shadow 0.15s ease-in-out;
-        will-change: background-color, border-color, box-shadow;
-        box-shadow: -8px 8px 0px #4d0a0d;
+        font-family: var(--font-body);
+        transition: background-color 0.1s ease-in-out;
+        font-weight: 500;
 
         &:hover {
-            // box-shadow: 0px 0px 0px 8px var(--color-primary);
-            box-shadow: 0px 0px 0px 4px var(--color-secondary);
-            // box-shadow: -8px 8px 0px var(--color-secondary);
-
-            // background-color: darken($color: var(--color-primary), $amount: 10);
-
-            // opacity: 0.9;
+            color: #fff;
+            background-color: var(--color-secondary);
         }
     }
 }
@@ -68,66 +48,4 @@
 /* Add your custom SCSS here */
 
 body {
-    // Example SCSS nesting
-    .site-content {
-        min-height: 50vh;
-    }
-}
-
-.mobile-menu-overlay {
-    background-color: var(--color-primary);
-}
-
-.carousel-black-container {
-    .carousel-black-cell {
-        width: 25%;
-        height: 500px;
-        // margin: 0 5%;
-        display: flex;
-        align-items: center;
-        img {
-            object-fit: cover;
-        }
-    }
-
-    .img-wrapper {
-        padding: 0 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-
-        img {
-            width: 100%;
-            height: 350px;
-        }
-        &.even {
-            img {
-                height: 500px !important;
-            }
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .carousel-black-cell {
-            width: 85%;
-            height: 400px;
-        }
-
-        .img-wrapper {
-            padding: 0 10px;
-
-            img {
-                height: 350px;
-            }
-            &.even {
-                img {
-                    height: 400px !important;
-                }
-            }
-        }
-    }
-}
-body {
-    // display: none !important;
 }
