@@ -85,6 +85,7 @@
     }
 
     .product-key-ingredients {
+        margin-bottom: 100px;
         .items {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -122,6 +123,89 @@
             margin-bottom: 16px;
             color: #051c18;
             font-size: 20px;
+        }
+    }
+}
+
+.products-tabs-wrapper {
+    .custom-product-tabs-container {
+        margin: 60px auto;
+        max-width: 620px;
+        text-align: center;
+    }
+
+    .custom-product-tabs-container .tabs-nav {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid transparent; /* Keeps layout stable */
+    }
+
+    .custom-product-tabs-container .tab-btn {
+        background: none;
+        border: none;
+        padding: 0 0 0px 0;
+        font-size: 16px;
+        letter-spacing: 10%;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        font-family: var(--font-heading);
+        color: #888888;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .custom-product-tabs-container .tab-btn:hover {
+        color: #333333;
+    }
+
+    .custom-product-tabs-container .tab-btn.active {
+        color: #051c18;
+        border-bottom: 2px solid transparent; /* Can add border color here if desired later */
+    }
+
+    .custom-product-tabs-container .tab-pane {
+        display: none;
+        font-size: 14px;
+        line-height: 24px;
+        color: #1b5d4e; /* Green text color matching screenshot */
+        text-transform: uppercase;
+        letter-spacing: 5%;
+        animation: fadeIn 0.5s ease;
+    }
+
+    .custom-product-tabs-container .tab-pane.active {
+        display: block;
+    }
+
+    .custom-product-tabs-container .tab-pane p {
+        margin-bottom: 20px;
+    }
+
+    .custom-product-tabs-container .tab-pane p:last-child {
+        margin-bottom: 0;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(5px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .custom-product-tabs-container .tabs-nav {
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .custom-product-tabs-container .tab-btn {
+            font-size: 14px;
         }
     }
 }

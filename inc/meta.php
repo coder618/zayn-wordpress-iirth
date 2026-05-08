@@ -25,6 +25,8 @@ function zayn_register_custom_meta_fields() {
                     <% } else { %>
                         Ingredient
                     <% } %>
-                ' )
+                ' ),
+            Field::make( 'rich_text', 'how_to_use', __( 'How to Use', 'zayn' ) ),
+            Field::make( 'rich_text', 'ingredients_detail', __( 'Ingredients Detail', 'zayn' ) ),
         ) );
 }

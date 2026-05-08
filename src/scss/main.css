@@ -331,6 +331,9 @@ footer .copyright-section .site-name {
 .single-product-page .anchor-links-wrapper button:hover {
   color: var(--color-secondary);
 }
+.single-product-page .product-key-ingredients {
+  margin-bottom: 100px;
+}
 .single-product-page .product-key-ingredients .items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -368,6 +371,77 @@ footer .copyright-section .site-name {
   margin-bottom: 16px;
   color: #051c18;
   font-size: 20px;
+}
+
+.products-tabs-wrapper .custom-product-tabs-container {
+  margin: 60px auto;
+  max-width: 620px;
+  text-align: center;
+}
+.products-tabs-wrapper .custom-product-tabs-container .tabs-nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid transparent; /* Keeps layout stable */
+}
+.products-tabs-wrapper .custom-product-tabs-container .tab-btn {
+  background: none;
+  border: none;
+  padding: 0 0 0px 0;
+  font-size: 16px;
+  letter-spacing: 10%;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  font-family: var(--font-heading);
+  color: #888888;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.products-tabs-wrapper .custom-product-tabs-container .tab-btn:hover {
+  color: #333333;
+}
+.products-tabs-wrapper .custom-product-tabs-container .tab-btn.active {
+  color: #051c18;
+  border-bottom: 2px solid transparent; /* Can add border color here if desired later */
+}
+.products-tabs-wrapper .custom-product-tabs-container .tab-pane {
+  display: none;
+  font-size: 14px;
+  line-height: 24px;
+  color: #1b5d4e; /* Green text color matching screenshot */
+  text-transform: uppercase;
+  letter-spacing: 5%;
+  animation: fadeIn 0.5s ease;
+}
+.products-tabs-wrapper .custom-product-tabs-container .tab-pane.active {
+  display: block;
+}
+.products-tabs-wrapper .custom-product-tabs-container .tab-pane p {
+  margin-bottom: 20px;
+}
+.products-tabs-wrapper .custom-product-tabs-container .tab-pane p:last-child {
+  margin-bottom: 0;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .products-tabs-wrapper .custom-product-tabs-container .tabs-nav {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .products-tabs-wrapper .custom-product-tabs-container .tab-btn {
+    font-size: 14px;
+  }
 }
 
 .single-product-carousel {
