@@ -331,6 +331,44 @@ footer .copyright-section .site-name {
 .single-product-page .anchor-links-wrapper button:hover {
   color: var(--color-secondary);
 }
+.single-product-page .product-key-ingredients .items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.single-product-page .product-key-ingredients {
+  padding-top: 160px;
+}
+.single-product-page .product-key-ingredients h2 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #051c18;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+  margin-bottom: 64px;
+}
+.single-product-page .product-key-ingredients img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+.single-product-page .product-key-ingredients p {
+  color: var(--color-primary);
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 5%;
+  font-weight: 400;
+}
+.single-product-page .product-key-ingredients h3 {
+  font-weight: 600;
+  letter-spacing: 10%;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #051c18;
+  font-size: 20px;
+}
 
 .single-product-carousel {
   width: 600px;
@@ -383,5 +421,17 @@ footer .copyright-section .site-name {
   }
 }
 /* Add your custom SCSS here */
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
 
 /*# sourceMappingURL=main.css.map */

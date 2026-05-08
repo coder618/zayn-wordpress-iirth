@@ -43,6 +43,8 @@ require_once get_template_directory() . '/inc/meta.php';
 
 // Register Theme Options
 require_once get_template_directory() . '/inc/theme-options.php';
+require_once get_template_directory() . '/inc/meta.php';
+
 
 // WooCommerce Integration
 if ( class_exists( 'WooCommerce' ) ) {

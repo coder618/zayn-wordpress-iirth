@@ -81,6 +81,15 @@ if ( post_password_required() ) {
 
     </div>
 
+    <div class="product-full-detail-breakdown">
+        <div id="key-ingredients-section">
+            <?php
+				get_template_part( 'components/single-product-page/key-ingredients' );
+			?>
+        </div>
+
+    </div>
+
     <div class="summary entry-summary flex flex-col justify-center">
         <?php
 		/**

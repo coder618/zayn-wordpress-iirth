@@ -5,3 +5,4 @@ For this project, please follow these instructions:
 1. Whenever adding new functionality, add it in a separate file in the `/inc` folder and require it in `functions.php`.
 2. For creating a new component, register the component in the `/inc/blocks.php` file and add the render file inside the `/components` folder use Carbon fields to create components, create a full empty .scss file in the `/scss/components` folder and add it to the `./src/scss/main.scss` file at bottom.
 3. For create meta fields, theme settings use Carbon fields.
+4. Dont use any tailwindcss classes, i will write the scss manually
