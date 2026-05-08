@@ -74,4 +74,19 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/services-cta-home' );
         } );
+
+    Block::make( __( 'Shop Page Banner', 'ahadul' ) )
+        ->set_icon( 'cart' )
+        ->set_description( __( 'A shop page banner block with title, detail, and image.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'shop' ), __( 'banner' ) ] )
+        ->add_fields( array(
+            Field::make( 'text', 'title', __( 'Title', 'ahadul' ) ),
+            Field::make( 'textarea', 'detail', __( 'Detail', 'ahadul' ) ),
+            Field::make( 'image', 'image', __( 'Image', 'ahadul' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/shop-page-banner' );
+        } );
 }
