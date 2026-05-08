@@ -107,6 +107,17 @@ if ( post_password_required() ) {
             // Fetch up to 4 related product IDs based on the current product
             $related_product_ids = wc_get_related_products( $product->get_id(), 4 );
             
+            // If no related products found, show random products excluding the current one
+            if ( empty( $related_product_ids ) ) {
+                $related_product_ids = wc_get_products( array(
+                    'status'  => 'publish',
+                    'limit'   => 4,
+                    'orderby' => 'rand',
+                    'exclude' => array( $product->get_id() ),
+                    'return'  => 'ids',
+                ) );
+            }
+
             set_query_var("product_listing", [
                 "title" => "YOU MIGHT ALSO LIKE",
                 "has_shop_btn" => false,

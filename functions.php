@@ -35,6 +35,9 @@ require_once get_template_directory() . '/inc/enqueue.php';
 
 require_once get_template_directory() . '/inc/helper.php';
 
+// Register Custom Post Types
+require_once get_template_directory() . '/inc/post-types.php';
+
 // Register Carbon Fields Blocks
 require_once get_template_directory() . '/inc/blocks.php';
 
