@@ -1,0 +1,103 @@
+.single-product-page {
+    .top-part-gallery-title-with-detail {
+        margin-top: 85px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 73px;
+        align-items: center;
+        justify-content: center;
+        .right-part {
+            .content {
+                padding: 64px;
+                border: 1px solid var(--color-gray);
+                height: 600px;
+            }
+        }
+
+        .title-and-price {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            line-height: 1.4;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 5%;
+        }
+        .price-wrapper {
+            color: var(--color-primary);
+            background-color: var(--color-gray);
+            height: 64px;
+            min-width: 64px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .excerpt {
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 5%;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: 40px;
+        }
+    }
+
+    .add-to-cart-btn-wrapper {
+        .single_add_to_cart_button {
+            background-color: var(--color-primary) !important;
+            color: var(--color-gray);
+            width: 100%;
+            height: 52px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-family: var(--font-body);
+            text-align: left;
+            padding: 10px 20px;
+        }
+    }
+
+    .anchor-links-wrapper {
+        display: flex;
+        // grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        margin-top: 40px;
+        a,
+        button {
+            color: var(--color-primary);
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 5%;
+            font-weight: 500;
+            &:hover {
+                color: var(--color-secondary);
+            }
+        }
+    }
+}
+
+.single-product-carousel {
+    width: 600px;
+    height: 600px;
+    display: block;
+
+    .s-item {
+        width: 100%;
+
+        display: block;
+        img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+    }
+}

@@ -5,6 +5,7 @@ module.exports = {
         "./inc/**/*.php",
         "./components/**/*.php",
         "./template-parts/**/*.php",
+        "./woocommerce/**/*.php",
         "./src/js/**/*.js",
     ],
     theme: {

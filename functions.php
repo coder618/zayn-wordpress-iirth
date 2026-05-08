@@ -44,6 +44,10 @@ require_once get_template_directory() . '/inc/meta.php';
 // Register Theme Options
 require_once get_template_directory() . '/inc/theme-options.php';
 
+// WooCommerce Integration
+if ( class_exists( 'WooCommerce' ) ) {
+    require_once get_template_directory() . '/inc/woocommerce.php';
+}
 
 function move_admin_bar_to_bottom() {
     if (is_admin_bar_showing()) {
