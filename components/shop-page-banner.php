@@ -23,7 +23,7 @@ $image  = $fields['image'] ?? '';
                 <div class="text-wrapper">
 
                     <?php if ( $title ) : ?>
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
+                    <h1 class="">
                         <?php echo esc_html( $title ); ?>
                     </h1>
                     <?php endif; ?>
@@ -41,7 +41,7 @@ $image  = $fields['image'] ?? '';
             <div class="right-part">
                 <?php 
                     echo wp_get_attachment_image( $image, 'full', false, array( 
-                        'class' => 'w-full h-auto object-cover rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.02]' 
+                        'class' => '' 
                     ) ); 
                 ?>
             </div>

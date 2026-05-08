@@ -19,9 +19,9 @@ function ahadul_scripts() {
     // Simple Parallax JS
     wp_enqueue_script( 'simple-parallax', 'https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.2/dist/simpleParallax.min.js', array(), '5.6.2', true );
 
-    // Register Flickity globally
-    wp_register_style( 'flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css', array(), '2.3.0' );
-    wp_register_script( 'flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '2.3.0', true );
+    // Enqueue Flickity globally
+    wp_enqueue_style( 'flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css', array(), '2.3.0' );
+    wp_enqueue_script( 'flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '2.3.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'ahadul_scripts' );
 

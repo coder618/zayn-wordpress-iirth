@@ -210,6 +210,9 @@
     }
 }
 
+.product-gallery-flickity {
+    // width: 600px;
+}
 .single-product-carousel {
     width: 600px;
     height: 600px;
@@ -224,5 +227,24 @@
             height: 600px;
             object-fit: cover;
         }
+    }
+
+    .flickity-button {
+        background-color: var(--color-primary);
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .flickity-button-icon {
+        }
+        svg {
+            // width: 16px;
+            // height: 16px;
+        }
+        &:hover {
+            background-color: var(--color-secondary);
+        }
+        // color: #fff;
     }
 }

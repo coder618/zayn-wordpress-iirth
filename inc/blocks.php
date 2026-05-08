@@ -89,4 +89,17 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/shop-page-banner' );
         } );
+
+    Block::make( __( 'All Product Display', 'ahadul' ) )
+        ->set_icon( 'store' )
+        ->set_description( __( 'Displays a grid of all available published products.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'products' ), __( 'shop' ), __( 'grid' ) ] )
+        ->add_fields( array(
+            Field::make( 'text', 'title', __( 'Section Title', 'ahadul' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/all-product-display' );
+        } );
 }

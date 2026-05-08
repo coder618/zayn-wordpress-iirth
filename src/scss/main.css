@@ -458,6 +458,17 @@ footer .copyright-section .site-name {
   height: 600px;
   object-fit: cover;
 }
+.single-product-carousel .flickity-button {
+  background-color: var(--color-primary);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.single-product-carousel .flickity-button:hover {
+  background-color: var(--color-secondary);
+}
 
 .product-listing {
   margin-bottom: 100px;
@@ -502,6 +513,16 @@ footer .copyright-section .site-name {
 .each-product-card .price-wrapper {
   color: #808080;
   font-size: 16px;
+}
+
+.all-product-display-section {
+  margin: 100px 0;
+}
+.all-product-display-section .items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 53px;
+  row-gap: 80px;
 }
 
 .shop-page-banner {

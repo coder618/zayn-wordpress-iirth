@@ -104,10 +104,13 @@ if ( post_password_required() ) {
 
     <div class="product-listing-wrapper">
         <?php
+            // Fetch up to 4 related product IDs based on the current product
+            $related_product_ids = wc_get_related_products( $product->get_id(), 4 );
+            
             set_query_var("product_listing", [
                 "title" => "YOU MIGHT ALSO LIKE",
                 "has_shop_btn" => false,
-                "product_ids" => [31,27,31,27]
+                "product_ids" => $related_product_ids
             ]);
 			get_template_part( 'components/product-listing' );
             

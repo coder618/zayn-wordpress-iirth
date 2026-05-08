@@ -1,0 +1,9 @@
+.all-product-display-section {
+    margin: 100px 0;
+    .items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 53px;
+        row-gap: 80px;
+    }
+}

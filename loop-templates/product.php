@@ -25,7 +25,7 @@ if ( ! is_a( $product, 'WC_Product' ) ) {
     <div class="img-wrapper">
 
         <?php 
-            echo $product->get_image( 'woocommerce_thumbnail', array(
+            echo $product->get_image( 'large', array(
                 'class' => 'product-img'
             ) ); 
         ?>

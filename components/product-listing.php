@@ -5,6 +5,10 @@
     $has_shop_btn = $component_data["has_shop_btn"] ?? false;
     $product_ids = $component_data["product_ids"] ?? []; // [1,2,3]
 
+    if(empty($product_ids)){
+        return;
+    }
+
 ?>
 
 <section class="product-listing">

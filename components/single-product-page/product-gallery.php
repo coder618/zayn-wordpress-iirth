@@ -8,8 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Enqueue Flickity assets
-wp_enqueue_style( 'flickity-css' );
-wp_enqueue_script( 'flickity-js' );
+// wp_enqueue_style( 'flickity-css' );
+// wp_enqueue_script( 'flickity-js' );
 
 // Get Image IDs from args
 $all_image_ids = isset( $args['image_ids'] ) && is_array( $args['image_ids'] ) ? $args['image_ids'] : array();
@@ -21,12 +21,23 @@ if ( empty( $all_image_ids ) ) {
 	echo '</div>';
 	return;
 }
+$arrow_right= '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.333 8h9.334M8 3.333 12.667 8 8 12.667"/></svg>';
 ?>
 
-<div class="product-gallery-flickity relative overflow-hidden ">
+<style>
+.product-gallery-flickity .flickity-button-icon {
+    fill: none !important;
+    stroke: #fff;
+    stroke-width: 9.375;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+}
+</style>
+
+<div class="product-gallery-flickity">
     <!-- Flickity Slider -->
-    <div class="main-carousel single-product-carousel"
-        data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround": true, "pageDots": false, "prevNextButtons": true, "arrowShape": "M65.3 14.5L30.9 48.9c-.6.6-.6 1.6 0 2.2l34.4 34.4c.6.6 1.6.6 2.2 0 .6-.6.6-1.6 0-2.2L34.2 50l33.3-33.3c.6-.6.6-1.6 0-2.2-.3-.3-.7-.5-1.1-.5s-.8.2-1.1.5z" }'>
+    <div class="single-product-carousel">
         <?php foreach ( $all_image_ids as $image_id ) : ?>
         <?php 
             // $image_url = wp_get_attachment_image_url( $image_id, 'woocommerce_single' );
@@ -34,9 +45,32 @@ if ( empty( $all_image_ids ) ) {
             $image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
             $full_image_url = wp_get_attachment_image_url( $image_id, 'full' );
             ?>
-        <div class="s-item">
-            <img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>" class="" />
+        <div class="s-item ">
+            <img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>"
+                class=" block" />
         </div>
         <?php endforeach; ?>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elem = document.querySelector('.single-product-carousel');
+    if (elem && typeof Flickity !== 'undefined') {
+        var flkty = new Flickity(elem, {
+            cellAlign: 'left',
+            contain: true,
+            wrapAround: true,
+            pageDots: false,
+            prevNextButtons: true,
+            imagesLoaded: true,
+            arrowShape: 'M79.17 50L20.83 50M50 20.83L20.83 50L50 79.17'
+        });
+
+        // Fallback to force resize once all page resources (including images) finish loading
+        window.addEventListener('load', function() {
+            flkty.resize();
+        });
+    }
+});
+</script>
