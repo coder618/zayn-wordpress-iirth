@@ -1086,6 +1086,68 @@ footer .copyright-section .site-name {
   position: relative;
 }
 
+.about-quote-section {
+  background-color: var(--color-gray);
+  margin: 160px 0 0 100px 0;
+  position: relative;
+}
+
+.about-quote-section .logo-wrapper {
+  position: absolute;
+  top: -60px;
+  border-radius: 50%;
+  left: calc(50% - 60px);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-primary);
+  align-items: center;
+}
+
+.about-quote-section .quote-wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.about-quote-section .quote-wrapper .quote-detail {
+  position: relative;
+  z-index: 1;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 5%;
+  padding: 0;
+  margin-bottom: 24px;
+  border: none;
+}
+
+.about-quote-section .quote-wrapper .quote-detail p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-quote-section .quote-wrapper .quote-detail {
+    font-size: 1.5rem;
+  }
+}
+
+.about-quote-section .quote-wrapper .quote-author {
+  position: relative;
+  z-index: 1;
+}
+
+.about-quote-section .quote-wrapper .quote-author .author-name {
+  font-family: var(--font-body);
+  font-size: 16px;
+  letter-spacing: 5%;
+  line-height: 28px;
+}
+
 .single-treatment-page .top-part-gallery-title-with-detail {
   margin-top: 85px;
   display: grid;

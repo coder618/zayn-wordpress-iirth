@@ -1,0 +1,59 @@
+.about-quote-section {
+    // padding: 60px 0 0 0;
+    background-color: var(--color-gray);
+    margin: 160px 0 0 100px 0;
+    position: relative;
+    .logo-wrapper {
+        position: absolute;
+        top: -60px;
+        border-radius: 50%;
+        left: calc(50% - 60px);
+        width: 120px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-primary);
+
+        align-items: center;
+    }
+    .quote-wrapper {
+        max-width: 680px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 100px 0;
+        position: relative;
+        color: var(--color-primary);
+        text-transform: uppercase;
+
+        .quote-detail {
+            position: relative;
+            z-index: 1;
+            font-size: 36px;
+            line-height: 44px;
+            letter-spacing: 5%;
+            padding: 0;
+            margin-bottom: 24px;
+            border: none;
+
+            p {
+                margin: 0;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .quote-author {
+            position: relative;
+            z-index: 1;
+
+            .author-name {
+                font-family: var(--font-body);
+                font-size: 16px;
+                letter-spacing: 5%;
+                line-height: 28px;
+            }
+        }
+    }
+}
