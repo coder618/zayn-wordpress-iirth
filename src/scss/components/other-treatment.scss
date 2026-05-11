@@ -1,0 +1,29 @@
+.other-treatment {
+    padding: 5rem 0;
+    background-color: #ffffff;
+
+    h2 {
+        text-align: left;
+        font-weight: 600;
+        margin-bottom: 64px;
+        font-size: 2rem;
+        letter-spacing: 0.1em;
+        color: #051c18;
+        text-transform: uppercase;
+    }
+
+    .treatment-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 53px;
+        align-items: flex-start;
+
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

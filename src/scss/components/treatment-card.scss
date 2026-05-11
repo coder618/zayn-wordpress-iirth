@@ -1,0 +1,92 @@
+.treatment-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .treatment-image {
+        position: relative;
+        width: 100%;
+        padding-top: 66.66%;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .treatment-price {
+            position: absolute;
+            bottom: 28px;
+            right: 24px;
+            background-color: #eeebe6;
+            color: #2d6b62;
+            color: var(--color-primary);
+
+            padding: 15px 22px;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+
+    .treatment-content {
+        padding: 32px 32px 58px 32px;
+        // flex-grow: 1;
+        background-color: #eeebe6;
+
+        .treatment-title {
+            margin: 0 0 1rem 0;
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            margin-bottom: 16px;
+            color: #051c18;
+            text-transform: uppercase;
+        }
+
+        .treatment-description {
+            color: var(--color-primary);
+            font-size: 12px;
+            line-height: 20px;
+            letter-spacing: 5%;
+
+            text-transform: uppercase;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .treatment-actions {
+        display: flex;
+        border-top: 1px solid #ffffff;
+        background-color: #e8e4de;
+
+        a {
+            flex: 1;
+            text-align: center;
+            padding: 8px 16px;
+
+            color: #2d6b62;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 5%;
+            line-height: 20px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #dcd7cf;
+            }
+
+            &:first-child {
+                border-right: 1px solid #ffffff;
+            }
+        }
+    }
+}
