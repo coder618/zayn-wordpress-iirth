@@ -144,4 +144,17 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/gallery-showcase' );
         } );
+
+    Block::make( __( 'Contact Form Shortcode', 'ahadul' ) )
+        ->set_icon( 'email' )
+        ->set_description( __( 'Displays a contact form using a shortcode.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'contact' ), __( 'form' ), __( 'shortcode' ) ] )
+        ->add_fields( array(
+            Field::make( 'text', 'shortcode', __( 'Form Shortcode', 'ahadul' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/contact-form-shortcode' );
+        } );
 }

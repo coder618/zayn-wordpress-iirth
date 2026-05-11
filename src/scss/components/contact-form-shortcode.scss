@@ -1,0 +1,97 @@
+.contact-form-shortcode-section {
+    margin: 100px 0;
+    .contact-form-wrapper {
+        max-width: 560px;
+        margin: 0 auto;
+        label {
+            display: none;
+        }
+
+        .select2.select2-container.forminator-select {
+            display: none;
+        }
+
+        .forminator-response-message.forminator-show {
+            border: 1px solid var(--color-gray);
+            font-size: 16px;
+            margin-bottom: 20px;
+            padding: 25px 32px;
+        }
+
+        .forminator-error {
+            background-color: #f2dede;
+            border-color: #ebccd1;
+            color: #a94442;
+        }
+        .forminator-success {
+            color: #5ee9b5;
+            background-color: #093f2f;
+            border-color: #082c22;
+        }
+        .forminator-loading {
+            background-color: #f2f2f2;
+            border-color: #e2e2e2;
+            color: #999;
+        }
+
+        forminator-error {
+        }
+
+        select,
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        textarea {
+            width: 100%;
+            padding: 12px 32px;
+            border: 1px solid var(--color-gray);
+            border-radius: 0;
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.2;
+            min-height: 64px;
+            font-family: var(--font-body);
+            transition: border-color 0.3s ease;
+            margin-bottom: 0;
+
+            &:focus {
+                outline: none;
+                border-color: var(--color-primary);
+            }
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .forminator-field {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .submit-btn,
+        .forminator-button-submit,
+        input[type="submit"],
+        button[type="submit"] {
+            display: inline-block;
+            margin-top: 12px;
+            background-color: var(--color-primary);
+            color: #fff;
+            padding: 12px 32px;
+            border: none;
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            min-width: 139px;
+            min-height: 52px;
+            &:hover {
+                background-color: var(--color-secondary);
+            }
+        }
+    }
+}
