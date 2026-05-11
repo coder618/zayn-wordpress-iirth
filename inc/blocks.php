@@ -201,4 +201,19 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/about-quote' );
         } );
+
+    Block::make( __( 'Our Craftsmanship', 'ahadul' ) )
+        ->set_icon( 'admin-tools' )
+        ->set_description( __( 'Our craftsmanship block with title, detail, and image.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'craftsmanship' ), __( 'about' ), __( 'detail' ) ] )
+        ->add_fields( array(
+            Field::make( 'text', 'title', __( 'Title', 'ahadul' ) ),
+            Field::make( 'textarea', 'detail', __( 'Detail', 'ahadul' ) ),
+            Field::make( 'image', 'image', __( 'Image', 'ahadul' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/our-craftsmanship' );
+        } );
 }

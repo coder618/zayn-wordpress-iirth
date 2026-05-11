@@ -1148,6 +1148,74 @@ footer .copyright-section .site-name {
   line-height: 28px;
 }
 
+.our-craftsmanship-section {
+  margin: 100px 0;
+}
+
+.our-craftsmanship-section .craftsmanship-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0px;
+  max-width: 1280px;
+}
+
+@media (max-width: 991px) {
+  .our-craftsmanship-section .craftsmanship-wrapper {
+    flex-direction: column;
+  }
+}
+
+.our-craftsmanship-section .craftsmanship-wrapper .image-content {
+  flex: 1;
+  width: 50%;
+}
+
+.our-craftsmanship-section .craftsmanship-wrapper .image-content .craftsmanship-image {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.our-craftsmanship-section .craftsmanship-wrapper .text-content {
+  flex: 1;
+  width: 50%;
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: var(--color-secondary);
+}
+
+.our-craftsmanship-section .craftsmanship-wrapper .text-content .section-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  letter-spacing: 5%;
+  margin-bottom: 120px;
+  font-weight: 600;
+}
+
+.our-craftsmanship-section .craftsmanship-wrapper .text-content .section-detail {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 24px;
+  line-height: 1.7;
+  max-width: 388px;
+}
+
+.our-craftsmanship-section .craftsmanship-wrapper .text-content .section-detail p {
+  margin-bottom: 20px;
+}
+
+.our-craftsmanship-section .craftsmanship-wrapper .text-content .section-detail p:last-child {
+  margin-bottom: 0;
+}
+
 .single-treatment-page .top-part-gallery-title-with-detail {
   margin-top: 85px;
   display: grid;
