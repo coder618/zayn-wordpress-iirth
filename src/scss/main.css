@@ -836,6 +836,69 @@ footer .copyright-section .site-name {
   line-height: 20px;
 }
 
+.about-detail-section {
+  padding: 100px 0;
+}
+.about-detail-section .about-detail-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+.about-detail-section .about-detail-wrapper .text-content {
+  flex: 1;
+  min-width: 500px;
+  max-width: 500px;
+}
+.about-detail-section .about-detail-wrapper .text-content .section-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 5%;
+  color: var(--color-primary);
+  margin-bottom: 40px;
+}
+@media (max-width: 768px) {
+  .about-detail-section .about-detail-wrapper .text-content .section-title {
+    font-size: 2rem;
+  }
+}
+.about-detail-section .about-detail-wrapper .text-content .section-detail {
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 5%;
+  line-height: 24px;
+}
+.about-detail-section .about-detail-wrapper .text-content .section-detail p {
+  margin-bottom: 20px;
+}
+.about-detail-section .about-detail-wrapper .text-content .section-detail p:last-child {
+  margin-bottom: 0;
+}
+.about-detail-section .about-detail-wrapper .image-content {
+  max-width: 630px;
+  flex: 1;
+  position: relative;
+  padding-right: 190px;
+}
+.about-detail-section .about-detail-wrapper .image-content .pattern-image {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 190px);
+  width: 380px;
+  height: 380px;
+}
+.about-detail-section .about-detail-wrapper .image-content .about-image {
+  width: 440px;
+  height: auto;
+  object-fit: cover;
+  min-width: 440px;
+  min-width: 440px;
+  z-index: 2;
+  position: relative;
+}
 .single-treatment-page .top-part-gallery-title-with-detail {
   margin-top: 85px;
   display: grid;

@@ -172,4 +172,19 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/about-us-banner' );
         } );
+
+    Block::make( __( 'About Detail', 'ahadul' ) )
+        ->set_icon( 'id' )
+        ->set_description( __( 'An about detail block with title, detail, and image.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'about' ), __( 'detail' ) ] )
+        ->add_fields( array(
+            Field::make( 'text', 'title', __( 'Title', 'ahadul' ) ),
+            Field::make( 'textarea', 'detail', __( 'Detail', 'ahadul' ) ),
+            Field::make( 'image', 'image', __( 'Image', 'ahadul' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/about-detail' );
+        } );
 }
