@@ -480,6 +480,63 @@ footer .copyright-section .site-name {
   }
 }
 
+.treatment-page-banner {
+  position: relative;
+  height: 393px;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.treatment-page-banner .overlay-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.treatment-page-banner .overlay-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(234, 230, 228, 0.8);
+  opacity: 0.8;
+}
+.treatment-page-banner .section-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.treatment-page-banner .text-wrapper {
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 800px;
+}
+.treatment-page-banner .text-wrapper {
+  position: relative;
+  z-index: 2;
+}
+.treatment-page-banner .right-part img {
+  height: 480px;
+}
+.treatment-page-banner h1 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #051c18;
+  letter-spacing: 10%;
+  margin-bottom: 32px;
+}
+.treatment-page-banner .detail {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-primary);
+  letter-spacing: 5%;
+}
+
 .single-treatment-page .top-part-gallery-title-with-detail {
   margin-top: 85px;
   display: grid;
