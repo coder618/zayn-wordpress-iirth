@@ -22,28 +22,28 @@ if (!$image_url && !empty($gallery)) {
 <div class="treatment-card">
     <div class="treatment-image">
         <?php if ($image_url): ?>
-            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title($id)); ?>">
+        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title($id)); ?>">
         <?php endif; ?>
         <?php if ($price): ?>
-            <div class="treatment-price">
-                <?php echo esc_html($price); ?>
-            </div>
+        <div class="treatment-price">
+            £<?php echo esc_html($price); ?>
+        </div>
         <?php endif; ?>
     </div>
-    
+
     <div class="treatment-content">
         <h3 class="treatment-title"><?php echo get_the_title($id); ?></h3>
         <div class="treatment-description">
             <?php echo get_the_excerpt($id); ?>
         </div>
     </div>
-    
+
     <div class="treatment-actions">
         <a href="<?php echo get_permalink($id); ?>" class="btn-view-details">VIEW DETAILS</a>
         <?php if ($booking_link): ?>
-            <a href="<?php echo esc_url($booking_link); ?>" class="btn-book-now">BOOK NOW</a>
+        <a href="<?php echo esc_url($booking_link); ?>" class="btn-book-now">BOOK NOW</a>
         <?php else: ?>
-            <a href="<?php echo get_permalink($id); ?>" class="btn-book-now">BOOK NOW</a>
+        <a href="<?php echo get_permalink($id); ?>" class="btn-book-now">BOOK NOW</a>
         <?php endif; ?>
     </div>
 </div>

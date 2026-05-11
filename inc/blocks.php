@@ -103,6 +103,19 @@ function ahadul_register_custom_blocks() {
             get_template_part( 'components/all-product-display' );
         } );
 
+    Block::make( __( 'All Treatment Display', 'ahadul' ) )
+        ->set_icon( 'heart' )
+        ->set_description( __( 'Displays a grid of all available published treatments.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'treatments' ), __( 'grid' ), __( 'list' ) ] )
+        ->add_fields( array(
+            Field::make( 'text', 'title', __( 'Section Title', 'ahadul' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/all-treatment-display' );
+        } );
+
 
     Block::make( __( 'Treatment Page Banner', 'ahadul' ) )
         ->set_icon( 'cart' )

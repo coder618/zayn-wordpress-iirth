@@ -23,12 +23,17 @@
             position: absolute;
             bottom: 28px;
             right: 24px;
-            background-color: #eeebe6;
+            background-color: var(--color-gray);
             color: #2d6b62;
             color: var(--color-primary);
+            font-family: var(--font-body);
+            padding: 22px 15px;
+            min-width: 64px;
+            min-height: 64px;
+            font-size: 20px;
+            line-height: 20px;
+            letter-spacing: 5%;
 
-            padding: 15px 22px;
-            font-size: 1.5rem;
             font-weight: 400;
         }
     }

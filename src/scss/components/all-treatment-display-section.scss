@@ -1,0 +1,10 @@
+.all-treatment-display-section {
+    margin: 100px 0;
+
+    .items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 53px;
+        row-gap: 80px;
+    }
+}
