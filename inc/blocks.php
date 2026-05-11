@@ -130,4 +130,18 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/treatment-page-banner' );
         } );
+
+    Block::make( __( 'Gallery Showcase', 'ahadul' ) )
+        ->set_icon( 'format-gallery' )
+        ->set_description( __( 'Displays a masonry gallery of multiple uploaded images.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'gallery' ), __( 'showcase' ), __( 'images' ), __( 'masonry' ) ] )
+        ->add_fields( array(
+            Field::make( 'media_gallery', 'gallery_images', __( 'Gallery Images', 'ahadul' ) )
+                ->set_type( array( 'image' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/gallery-showcase' );
+        } );
 }
