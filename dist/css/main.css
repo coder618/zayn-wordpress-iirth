@@ -932,6 +932,7 @@ footer .copyright-section .site-name {
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 14px;
   min-width: 139px;
   min-height: 52px;
 }
