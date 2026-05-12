@@ -14,4 +14,18 @@
             grid-template-columns: 1fr;
         }
     }
+
+    @media (max-width: 767px) {
+        margin: 56px 0;
+        .items {
+            justify-content: center;
+            place-items: center;
+            gap: 40px;
+            > * {
+                max-width: 280px;
+            }
+        }
+        .item {
+        }
+    }
 }

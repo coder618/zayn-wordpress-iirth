@@ -46,6 +46,7 @@
     .right-part {
         img {
             height: 480px;
+            object-fit: cover;
         }
     }
     h1 {
@@ -63,5 +64,33 @@
         color: var(--color-primary);
         letter-spacing: 5%;
         max-width: 800px;
+    }
+
+    @media (max-width: 767px) {
+        height: unset;
+        .content {
+            flex-direction: column-reverse;
+            // grid-template-columns: 1fr;
+            display: flex;
+        }
+        .right-part {
+            img {
+                height: 200px;
+            }
+        }
+        .left-part {
+            padding: 32px 20px;
+        }
+        h1 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .text-content {
+            p {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
     }
 }
