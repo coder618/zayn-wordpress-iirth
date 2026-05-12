@@ -36,10 +36,11 @@ if ( post_password_required() ) {
 <div class="single-product-page" id="product-<?php the_ID(); ?>"
     <?php wc_product_class( 'grid grid-cols-1 lg:grid-cols-2 gap-12', $product ); ?>>
 
+    <div class="container">
 
-    <div class="top-part-gallery-title-with-detail">
-        <div class="left-part">
-            <?php
+        <div class="top-part-gallery-title-with-detail">
+            <div class="left-part">
+                <?php
 				$main_image_id  = $product->get_image_id();
 				$attachment_ids = $product->get_gallery_image_ids();
 				
@@ -55,51 +56,57 @@ if ( post_password_required() ) {
                     "image_ids" => $all_image_ids
                 ] );
 			?>
-        </div>
-        <div class="right-part">
-            <div class="content">
-                <div class="title-and-price">
-                    <h1><?php echo get_the_title(); ?></h1>
+            </div>
+            <div class="right-part">
+                <div class="content">
+                    <div class="title-and-price">
+                        <h1><?php echo get_the_title(); ?></h1>
 
-                    <div class="price-wrapper">
-                        <?php echo $product->get_price_html(); ?>
+                        <div class="price-wrapper">
+                            <?php echo $product->get_price_html(); ?>
+                        </div>
+                    </div>
+
+                    <div class="excerpt">
+                        <?php  the_excerpt(); ?>
+                    </div>
+
+                    <div class="add-to-cart-btn-wrapper">
+                        <?php woocommerce_template_single_add_to_cart(); ?>
+                    </div>
+                    <div class="anchor-links-wrapper">
+                        <button data-target-tab="tab-details">Product Details</button>
+                        <button data-target-tab="tab-how-to-use">How to Use</button>
+                        <button data-target-tab="tab-ingredients">INGREDIENTS</button>
                     </div>
                 </div>
 
-                <div class="excerpt">
-                    <?php  the_excerpt(); ?>
-                </div>
 
-                <div class="add-to-cart-btn-wrapper">
-                    <?php woocommerce_template_single_add_to_cart(); ?>
-                </div>
-                <div class="anchor-links-wrapper">
-                    <button data-target-tab="tab-details">Product Details</button>
-                    <button data-target-tab="tab-how-to-use">How to Use</button>
-                    <button data-target-tab="tab-ingredients">INGREDIENTS</button>
-                </div>
+
             </div>
 
 
 
         </div>
-
-
-
     </div>
 
-    <div class="product-full-detail-breakdown">
-        <div id="key-ingredients-section">
-            <?php
+    <div class="container">
+
+        <div class="product-full-detail-breakdown">
+            <div id="key-ingredients-section">
+                <?php
 				get_template_part( 'components/single-product-page/key-ingredients' );
 			?>
+            </div>
         </div>
     </div>
+    <div class="container">
 
-    <div class="products-tabs-wrapper w-full clear-both" id="products-tabs-wrapper">
-        <?php
+        <div class="products-tabs-wrapper w-full clear-both" id="products-tabs-wrapper">
+            <?php
 			get_template_part( 'components/single-product-page/products-tabs' );
 		?>
+        </div>
     </div>
 
     <div class="product-listing-wrapper">

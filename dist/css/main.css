@@ -458,6 +458,7 @@ footer .copyright-section .site-name {
   .product-listing .title-part {
     padding: 0 20px;
     justify-content: space-between;
+    margin-bottom: 48px;
   }
 
   .product-listing .container {

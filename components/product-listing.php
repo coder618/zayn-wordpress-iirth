@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (typeof Flickity !== 'undefined') {
             new Flickity(elem, {
                 watchCSS: true,
-                cellAlign: 'center',
+                cellAlign: 'left',
                 contain: true,
                 wrapAround: true,
                 pageDots: false,
