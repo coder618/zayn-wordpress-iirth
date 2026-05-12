@@ -275,4 +275,24 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/zayn-experience-home' );
         } );
+
+    Block::make( __( 'Home Image Slider', 'ahadul' ) )
+        ->set_icon( 'images-alt2' )
+        ->set_description( __( 'A home image slider block with title, detail, and image.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'slider' ), __( 'image' ), __( 'home' ) ] )
+        ->add_fields( array(
+            Field::make( 'complex', 'slider_items', __( 'Slider Items', 'ahadul' ) )
+                ->add_fields( array(
+                    Field::make( 'text', 'title', __( 'Title', 'ahadul' ) ),
+                    Field::make( 'textarea', 'detail', __( 'Detail', 'ahadul' ) ),
+                    Field::make( 'image', 'image', __( 'Image', 'ahadul' ) ),
+                    Field::make( 'text', 'link', __( 'Link', 'ahadul' ) ),
+                ) )
+                ->set_layout( 'tabbed-horizontal' )
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/home-image-slider' );
+        } );
 }
