@@ -295,4 +295,25 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/home-image-slider' );
         } );
+
+    Block::make( __( 'Our Stores', 'ahadul' ) )
+        ->set_icon( 'store' )
+        ->set_description( __( 'Our Stores block with title and multiple stores.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'stores' ), __( 'our' ), __( 'locations' ) ] )
+        ->add_fields( array(
+            Field::make( 'text', 'title', __( 'Title', 'ahadul' ) ),
+            Field::make( 'complex', 'stores', __( 'Stores', 'ahadul' ) )
+                ->add_fields( array(
+                    Field::make( 'rich_text', 'title_with_detail', __( 'Title with detail', 'ahadul' ) ),
+                    Field::make( 'image', 'image', __( 'Image', 'ahadul' ) ),
+                    Field::make( 'text', 'view_details_link', __( 'View Details Link', 'ahadul' ) ),
+                    Field::make( 'text', 'book_now_link', __( 'Book Now Link', 'ahadul' ) ),
+                ) )
+                ->set_layout( 'tabbed-horizontal' )
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/our-stores' );
+        } );
 }
