@@ -9,6 +9,7 @@ $detail    = $fields['detail'] ?? '';
 $btn_title = $fields['btn_title'] ?? '';
 $btn_link  = $fields['btn_link'] ?? '';
 $image_id  = $fields['image'] ?? '';
+$hide_logo = $fields['hide_logo'] ?? false;
 
 $arrow_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33" d="M2.5 6h7M6 2.5 9.5 6 6 9.5"/></svg>';
 
@@ -19,10 +20,12 @@ $arrow_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fil
         <div class="content">
             <div class="text-content">
 
+                <?php if ( ! $hide_logo ) : ?>
                 <div class="logo-wrapper">
                     <img src="<?php echo get_template_directory_uri(); ?>/dist/icons/logo-pattern.svg"
                         alt="Logo Pattern" />
                 </div>
+                <?php endif; ?>
 
                 <?php if ( $detail ) : ?>
                 <div class="detail-wrapper">
