@@ -11,56 +11,80 @@
         @media (max-width: 991px) {
             flex-direction: column;
         }
+    }
+    .image-content {
+        flex: 1;
+        width: 50%;
 
-        .image-content {
-            flex: 1;
-            width: 50%;
+        .craftsmanship-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    }
 
-            .craftsmanship-image {
-                width: 100%;
-                height: auto;
-                object-fit: cover;
-                // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    .text-content {
+        flex: 1;
+        width: 50%;
+        align-items: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+
+        text-transform: uppercase;
+        text-align: center;
+        background-color: var(--color-secondary);
+    }
+    .section-title {
+        font-family: var(--font-heading);
+        font-size: 28px;
+        letter-spacing: 5%;
+        margin-bottom: 120px;
+        font-weight: 600;
+    }
+
+    .section-detail {
+        font-family: var(--font-body);
+        font-size: 14px;
+        line-height: 24px;
+        line-height: 1.7;
+        max-width: 388px;
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
             }
         }
+    }
 
+    @media (max-width: 767px) {
+        margin: 56px 0;
+        .section-title {
+            font-size: 24px;
+        }
+        .text-content,
+        .image-content {
+            width: 100%;
+        }
         .text-content {
-            flex: 1;
-            width: 50%;
-            align-items: center;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 20px;
+            padding: 45px 24px;
+        }
 
-            text-transform: uppercase;
-            text-align: center;
-            background-color: var(--color-secondary);
-
-            .section-title {
-                font-family: var(--font-heading);
-                font-size: 28px;
-                letter-spacing: 5%;
-                margin-bottom: 120px;
-                font-weight: 600;
-            }
-
-            .section-detail {
-                font-family: var(--font-body);
-                font-size: 14px;
-                line-height: 24px;
-                line-height: 1.7;
-                max-width: 388px;
-
-                p {
-                    margin-bottom: 20px;
-
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                }
-            }
+        .image-content {
+        }
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 48px;
+            line-height: 1.2;
+        }
+        .section-detail {
+            font-size: 14px;
+            line-height: 24px;
         }
     }
 }

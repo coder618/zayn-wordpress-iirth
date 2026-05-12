@@ -1118,16 +1118,16 @@ footer .copyright-section .site-name {
     flex-direction: column;
   }
 }
-.our-craftsmanship-section .craftsmanship-wrapper .image-content {
+.our-craftsmanship-section .image-content {
   flex: 1;
   width: 50%;
 }
-.our-craftsmanship-section .craftsmanship-wrapper .image-content .craftsmanship-image {
+.our-craftsmanship-section .image-content .craftsmanship-image {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-.our-craftsmanship-section .craftsmanship-wrapper .text-content {
+.our-craftsmanship-section .text-content {
   flex: 1;
   width: 50%;
   align-items: center;
@@ -1140,25 +1140,49 @@ footer .copyright-section .site-name {
   text-align: center;
   background-color: var(--color-secondary);
 }
-.our-craftsmanship-section .craftsmanship-wrapper .text-content .section-title {
+.our-craftsmanship-section .section-title {
   font-family: var(--font-heading);
   font-size: 28px;
   letter-spacing: 5%;
   margin-bottom: 120px;
   font-weight: 600;
 }
-.our-craftsmanship-section .craftsmanship-wrapper .text-content .section-detail {
+.our-craftsmanship-section .section-detail {
   font-family: var(--font-body);
   font-size: 14px;
   line-height: 24px;
   line-height: 1.7;
   max-width: 388px;
 }
-.our-craftsmanship-section .craftsmanship-wrapper .text-content .section-detail p {
+.our-craftsmanship-section .section-detail p {
   margin-bottom: 20px;
 }
-.our-craftsmanship-section .craftsmanship-wrapper .text-content .section-detail p:last-child {
+.our-craftsmanship-section .section-detail p:last-child {
   margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .our-craftsmanship-section {
+    margin: 56px 0;
+  }
+  .our-craftsmanship-section .section-title {
+    font-size: 24px;
+  }
+  .our-craftsmanship-section .text-content,
+  .our-craftsmanship-section .image-content {
+    width: 100%;
+  }
+  .our-craftsmanship-section .text-content {
+    padding: 45px 24px;
+  }
+  .our-craftsmanship-section .section-title {
+    font-size: 20px;
+    margin-bottom: 48px;
+    line-height: 1.2;
+  }
+  .our-craftsmanship-section .section-detail {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 .zayn-experience-home {
