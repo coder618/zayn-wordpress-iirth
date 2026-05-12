@@ -1345,7 +1345,7 @@ footer .copyright-section .site-name {
 }
 
 .our-stores-section {
-  padding: 60px 0;
+  margin: 60px 0;
 }
 .our-stores-section__title {
   margin-bottom: 64px;
@@ -1354,20 +1354,24 @@ footer .copyright-section .site-name {
   text-transform: uppercase;
   color: var(--color-accent);
 }
+@media (max-width: 768px) {
+  .our-stores-section {
+    margin: 56px 0;
+  }
+  .our-stores-section__title {
+    margin-bottom: 32px;
+    font-size: 20px;
+  }
+}
 
 .our-stores-grid {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .our-stores-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .our-stores-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1402,17 +1406,12 @@ footer .copyright-section .site-name {
   flex-direction: column;
   flex-grow: 1;
 }
-.our-stores-item__details {
-  margin-bottom: 24px;
-  flex-grow: 1;
-  padding: 32px 32px 73px 32px;
-}
-.our-stores-item__details h1,
-.our-stores-item__details h2,
-.our-stores-item__details h3,
-.our-stores-item__details h4,
-.our-stores-item__details h5,
-.our-stores-item__details h6 {
+.our-stores-item h1,
+.our-stores-item h2,
+.our-stores-item h3,
+.our-stores-item h4,
+.our-stores-item h5,
+.our-stores-item h6 {
   margin-bottom: 16px;
   font-size: 20px;
   line-height: 20px;
@@ -1420,6 +1419,10 @@ footer .copyright-section .site-name {
   font-weight: 600;
   letter-spacing: 5%;
   color: var(--color-accent);
+}
+.our-stores-item__details {
+  padding: 32px 32px 73px 32px;
+  flex-grow: 1;
 }
 .our-stores-item__details p {
   margin-bottom: 0;
@@ -1457,6 +1460,20 @@ footer .copyright-section .site-name {
 }
 .our-stores-item .our-stores-item__btn--details {
   border-right: 1px solid #fff;
+}
+@media (max-width: 768px) {
+  .our-stores-item__details {
+    padding: 32px 32px 53px 32px;
+  }
+  .our-stores-item h1,
+  .our-stores-item h2,
+  .our-stores-item h3,
+  .our-stores-item h4,
+  .our-stores-item h5,
+  .our-stores-item h6 {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
 }
 
 .quote-slider-section {
