@@ -47,18 +47,30 @@
     .banner-title {
         font-family: var(--font-heading);
         font-size: 28px;
-
+        font-weight: 700;
         margin-bottom: 32px;
         color: #ffffff;
-
-        @media (max-width: 768px) {
-            font-size: 2.2rem;
-        }
     }
 
     .banner-detail {
         font-family: var(--font-body);
         font-size: 14px;
         line-height: 20px;
+    }
+
+    @media (max-width: 767px) {
+        min-height: 420px;
+        .text-content {
+            padding: 20px 20px 24px 20px;
+        }
+        .banner-detail {
+            font-size: 12px;
+            line-height: 20px;
+        }
+        .banner-title {
+            font-size: 20px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
     }
 }
