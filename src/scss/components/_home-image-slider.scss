@@ -53,31 +53,23 @@
     }
 
     .flickity-button {
-        background: transparent;
-        color: var(--color-primary);
+        background: var(--color-primary);
+        color: #fff;
 
         &:hover {
-            background: transparent;
+            background: var(--color-secondary);
+        }
+
+        &:disabled {
+            display: none;
         }
 
         .flickity-button-icon {
             fill: none !important;
-            stroke: var(--color-primary);
+            stroke: #fff;
             stroke-width: 9.375;
             stroke-linecap: round;
             stroke-linejoin: round;
-        }
-    }
-    .flickity-page-dots {
-        bottom: -30px;
-
-        .dot {
-            background: var(--color-primary);
-            opacity: 0.25;
-
-            &.is-selected {
-                opacity: 1;
-            }
         }
     }
 }

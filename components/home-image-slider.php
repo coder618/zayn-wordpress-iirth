@@ -16,7 +16,7 @@ $slider_items = $block_data['slider_items'] ?? [];
                     <div class="slider-item">
                         <a class="slider-content " href="<?php echo esc_url( $item['link'] ); ?>"
                             style="background-image: url(<?php echo $url; ?>);">
-                            
+
                             <div class="text-content">
 
                                 <?php if ( ! empty( $item['title'] ) ) : ?>
@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var flkty = new Flickity(elem, {
             cellAlign: 'left',
             contain: true,
-            wrapAround: true,
-            pageDots: true,
+            wrapAround: false,
+            pageDots: false,
             prevNextButtons: true,
             imagesLoaded: true,
             arrowShape: 'M79.17 50L20.83 50M50 20.83L20.83 50L50 79.17'

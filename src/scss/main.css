@@ -1168,28 +1168,21 @@ footer .copyright-section .site-name {
   width: 30%;
 }
 .home-image-slider-section .flickity-button {
-  background: transparent;
-  color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
 }
 .home-image-slider-section .flickity-button:hover {
-  background: transparent;
+  background: var(--color-secondary);
+}
+.home-image-slider-section .flickity-button:disabled {
+  display: none;
 }
 .home-image-slider-section .flickity-button .flickity-button-icon {
   fill: none !important;
-  stroke: var(--color-primary);
+  stroke: #fff;
   stroke-width: 9.375;
   stroke-linecap: round;
   stroke-linejoin: round;
-}
-.home-image-slider-section .flickity-page-dots {
-  bottom: -30px;
-}
-.home-image-slider-section .flickity-page-dots .dot {
-  background: var(--color-primary);
-  opacity: 0.25;
-}
-.home-image-slider-section .flickity-page-dots .dot.is-selected {
-  opacity: 1;
 }
 
 .single-treatment-page .top-part-gallery-title-with-detail {
