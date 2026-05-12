@@ -1789,6 +1789,17 @@ footer .copyright-section .site-name {
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .quote-slider-section {
+    margin: 56px 0;
+    padding: 40px 0 80px 0;
+  }
+
+  .quote-slider-section .container {
+    padding: 0;
+  }
+}
+
 .quote-slider-item {
   width: 100%;
   padding: 20px 40px;
@@ -1824,6 +1835,22 @@ footer .copyright-section .site-name {
   text-transform: uppercase;
 }
 
+@media (max-width: 767px) {
+  .quote-slider-item {
+    padding: 0 20px;
+  }
+
+  .quote-slider-item .quote-slider-detail {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 24px;
+  }
+
+  .quote-slider-item .quote-slider-person {
+    font-size: 14px;
+  }
+}
+
 /* Make only the active slide fully visible */
 
 .quote-slider-item.is-selected {
@@ -1856,6 +1883,12 @@ footer .copyright-section .site-name {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 767px) {
+  .quote-slider-section .flickity-button {
+    display: none;
+  }
+}
+
 .quote-slider-section .flickity-prev-next-button {
   width: 44px;
   height: 44px;
@@ -1863,6 +1896,12 @@ footer .copyright-section .site-name {
 
 .quote-slider-section .flickity-page-dots {
   bottom: -30px;
+}
+
+@media (max-width: 767px) {
+  .quote-slider-section .flickity-page-dots {
+    bottom: -40px;
+  }
 }
 
 .quote-slider-section .flickity-page-dots .dot {

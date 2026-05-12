@@ -27,6 +27,14 @@
     .quote-slider-carousel {
         width: 100%;
     }
+
+    @media (max-width: 767px) {
+        margin: 56px 0;
+        padding: 40px 0 80px 0;
+        .container {
+            padding: 0;
+        }
+    }
 }
 .quote-slider-item {
     width: 100%;
@@ -59,6 +67,17 @@
         opacity: 0.5;
         font-style: normal;
         text-transform: uppercase;
+    }
+    @media (max-width: 767px) {
+        padding: 0 20px;
+        .quote-slider-detail {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 24px;
+        }
+        .quote-slider-person {
+            font-size: 14px;
+        }
     }
 }
 
@@ -95,6 +114,10 @@
         stroke-linejoin: round;
         transition: all 0.3s ease;
     }
+
+    @media (max-width: 767px) {
+        display: none;
+    }
 }
 
 .quote-slider-section .flickity-prev-next-button {
@@ -104,6 +127,9 @@
 
 .quote-slider-section .flickity-page-dots {
     bottom: -30px;
+    @media (max-width: 767px) {
+        bottom: -40px;
+    }
 }
 
 .quote-slider-section .flickity-page-dots .dot {
