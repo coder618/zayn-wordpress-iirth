@@ -180,6 +180,7 @@ footer .copyright-section .site-name {
   font-size: 14px;
   font-family: var(--font-body);
   font-weight: medium;
+  font-weight: 600;
   display: inline-block;
   display: inline-flex;
   align-items: center;
@@ -220,6 +221,32 @@ footer .copyright-section .site-name {
   bottom: 0;
   padding: 0 20px 80px 80px;
   left: 0;
+}
+@media (max-width: 768px) {
+  .home-banner-section .banner-items {
+    grid-template-columns: 1fr;
+  }
+  .home-banner-section .banner-item {
+    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
+  }
+  .home-banner-section .banner-item .text-part {
+    padding: 0 20px 24px 20px;
+  }
+  .home-banner-section .banner-item h2 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+  .home-banner-section .banner-item p {
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .home-banner-section .banner-item a {
+    padding: 8px 20px;
+  }
 }
 
 .services-cta-home-section .cta-items {

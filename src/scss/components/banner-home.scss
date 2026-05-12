@@ -32,7 +32,7 @@
             background-color: #eae6e4;
             font-size: 14px;
             font-family: var(--font-body);
-            font-weight: medium;
+            font-weight: 500;
 
             display: inline-block;
             display: inline-flex;
@@ -77,6 +77,33 @@
             bottom: 0;
             padding: 0 20px 80px 80px;
             left: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .banner-items {
+            grid-template-columns: 1fr;
+        }
+        .banner-item {
+            height: 300px;
+            min-height: 300px;
+            max-height: 300px;
+            .text-part {
+                padding: 0 20px 24px 20px;
+            }
+            h2 {
+                font-size: 20px;
+                line-height: 20px;
+                margin-bottom: 20px;
+            }
+            p {
+                margin-bottom: 20px;
+                font-size: 12px;
+                line-height: 20px;
+            }
+            a {
+                padding: 8px 20px;
+            }
         }
     }
 }
