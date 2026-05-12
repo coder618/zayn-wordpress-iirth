@@ -316,4 +316,22 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/our-stores' );
         } );
+
+    Block::make( __( 'Quote Slider', 'ahadul' ) )
+        ->set_icon( 'testimonial' )
+        ->set_description( __( 'A slider block for quotes with detail and person name.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'quote' ), __( 'slider' ), __( 'testimonial' ) ] )
+        ->add_fields( array(
+            Field::make( 'complex', 'quotes', __( 'Quotes', 'ahadul' ) )
+                ->add_fields( array(
+                    Field::make( 'textarea', 'detail', __( 'Detail', 'ahadul' ) ),
+                    Field::make( 'text', 'person_name', __( 'Person Name', 'ahadul' ) ),
+                ) )
+                ->set_layout( 'tabbed-horizontal' )
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/quote-slider' );
+        } );
 }
