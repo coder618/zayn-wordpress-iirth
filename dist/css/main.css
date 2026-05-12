@@ -1031,7 +1031,7 @@ footer .copyright-section .site-name {
 }
 
 .about-detail-section {
-  padding: 100px 0;
+  margin: 100px 0;
 }
 
 .about-detail-section .about-detail-wrapper {
@@ -1053,7 +1053,7 @@ footer .copyright-section .site-name {
   font-size: 28px;
   font-weight: 600;
   letter-spacing: 5%;
-  color: var(--color-primary);
+  color: #051c18;
   margin-bottom: 40px;
 }
 
@@ -1106,7 +1106,7 @@ footer .copyright-section .site-name {
 
 .about-quote-section {
   background-color: var(--color-gray);
-  margin: 160px 0 0 100px 0;
+  margin: 160px 0 100px 0;
   position: relative;
 }
 
@@ -1232,6 +1232,106 @@ footer .copyright-section .site-name {
 
 .our-craftsmanship-section .craftsmanship-wrapper .text-content .section-detail p:last-child {
   margin-bottom: 0;
+}
+
+.zayn-experience-home {
+  margin: 100px 0;
+}
+
+.zayn-experience-home .logo-wrapper {
+  background-color: var(--color-primary);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 40px;
+  padding: 5px;
+}
+
+.zayn-experience-home .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.zayn-experience-home .text-content {
+  flex: 1;
+  min-width: 500px;
+  max-width: 500px;
+}
+
+.zayn-experience-home .text-content h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 5%;
+  color: #051c18;
+  margin-bottom: 40px;
+}
+
+.zayn-experience-home .text-content p {
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 5%;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.zayn-experience-home .text-content p:last-child {
+  margin-bottom: 0;
+}
+
+.zayn-experience-home .image-content {
+  max-width: 630px;
+  flex: 1;
+  position: relative;
+  padding-right: 190px;
+}
+
+.zayn-experience-home .image-content .pattern-image {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 190px);
+  width: 380px;
+  height: 380px;
+}
+
+.zayn-experience-home .image-content .right-image {
+  width: 440px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 440px;
+  z-index: 2;
+  position: relative;
+}
+
+.zayn-experience-home .btn-wrapper {
+  margin-top: 40px;
+}
+
+.zayn-experience-home .btn-wrapper a {
+  display: inline-flex;
+  text-align: center;
+  padding: 16px 20px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 5%;
+  background-color: var(--color-gray);
+  color: var(--color-primary);
+  align-items: center;
+  gap: 94px;
+}
+
+.zayn-experience-home .btn-wrapper a:hover {
+  background-color: var(--color-primary);
+  color: #fff;
 }
 
 .single-treatment-page .top-part-gallery-title-with-detail {

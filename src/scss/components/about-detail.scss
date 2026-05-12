@@ -1,5 +1,5 @@
 .about-detail-section {
-    padding: 100px 0;
+    margin: 100px 0;
 
     .about-detail-wrapper {
         display: flex;
@@ -18,7 +18,7 @@
                 font-size: 28px;
                 font-weight: 600;
                 letter-spacing: 5%;
-                color: var(--color-primary);
+                color: #051c18;
                 margin-bottom: 40px;
 
                 @media (max-width: 768px) {

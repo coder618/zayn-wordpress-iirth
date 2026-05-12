@@ -259,4 +259,20 @@ function ahadul_register_custom_blocks() {
             ) );
             get_template_part( 'components/product-listing' );
         } );
+
+    Block::make( __( 'Zayn Experience Home', 'ahadul' ) )
+        ->set_icon( 'star-filled' )
+        ->set_description( __( 'Zayn Experience Home block with title, detail, button and image.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'experience' ), __( 'home' ), __( 'zayn' ) ] )
+        ->add_fields( array(
+            Field::make( 'rich_text', 'detail', __( 'Title with detail', 'ahadul' ) ),
+            Field::make( 'text', 'btn_title', __( 'Button Title', 'ahadul' ) ),
+            Field::make( 'text', 'btn_link', __( 'Button Link', 'ahadul' ) ),
+            Field::make( 'image', 'image', __( 'Image', 'ahadul' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/zayn-experience-home' );
+        } );
 }
