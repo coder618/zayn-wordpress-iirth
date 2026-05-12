@@ -49,3 +49,19 @@ $items  = $fields['services_cta_items'] ?? [];
         <?php endif; ?>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elem = document.querySelector('.services-cta-home-section .cta-items');
+    if (elem && typeof Flickity !== 'undefined') {
+        var flkty = new Flickity(elem, {
+            watchCSS: true,
+            cellAlign: 'center',
+            contain: true,
+            wrapAround: true,
+            pageDots: false,
+            prevNextButtons: false
+        });
+    }
+});
+</script>

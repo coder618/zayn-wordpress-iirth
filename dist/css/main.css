@@ -246,8 +246,7 @@ footer .copyright-section .site-name {
   background-color: #eae6e4;
   font-size: 14px;
   font-family: var(--font-body);
-  font-weight: medium;
-  font-weight: 600;
+  font-weight: 500;
   display: inline-block;
   display: inline-flex;
   align-items: center;
@@ -330,10 +329,25 @@ footer .copyright-section .site-name {
   }
 }
 
+.services-cta-home-section {
+  margin: 64px 0;
+}
+
 .services-cta-home-section .cta-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+
+@media (max-width: 767px) {
+  .services-cta-home-section .cta-items {
+    display: block;
+  }
+
+  .services-cta-home-section .cta-items:after {
+    content: "flickity";
+    display: none;
+  }
 }
 
 .services-cta-home-section .cta-item {
@@ -363,6 +377,21 @@ footer .copyright-section .site-name {
   line-height: 20px;
   z-index: 2;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .services-cta-home-section {
+    margin: 40px 0;
+  }
+
+  .services-cta-home-section .cta-item {
+    width: 80%;
+    margin-right: 16px;
+  }
+
+  .services-cta-home-section .container {
+    padding: 0;
+  }
 }
 
 .product-listing {
@@ -408,10 +437,31 @@ footer .copyright-section .site-name {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .product-listing .product-items {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    display: block;
+  }
+
+  .product-listing .product-items:after {
+    content: "flickity";
+    display: none;
+  }
+
+  .product-listing .product-items .product-item {
+    padding: 0 8px;
+  }
+
+  .product-listing h2 {
+    font-size: 20px;
+  }
+
+  .product-listing .title-part {
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+
+  .product-listing .container {
+    padding: 0;
   }
 }
 
@@ -1367,8 +1417,76 @@ footer .copyright-section .site-name {
   color: #fff;
 }
 
+@media (max-width: 767px) {
+  .zayn-experience-home {
+    margin: 56px 0;
+  }
+
+  .zayn-experience-home .content {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+
+  .zayn-experience-home .image-content {
+    padding: 35px;
+    position: relative;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .zayn-experience-home .image-content .pattern-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .zayn-experience-home .image-content .right-image {
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+  }
+
+  .zayn-experience-home .text-content {
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .zayn-experience-home .logo-wrapper {
+    margin-bottom: 32px;
+  }
+
+  .zayn-experience-home h2 {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .zayn-experience-home p {
+    margin-bottom: 32px;
+    font-size: 14px;
+  }
+
+  .zayn-experience-home .btn-wrapper {
+    margin-top: 32px;
+  }
+
+  .zayn-experience-home .btn-wrapper a {
+    font-weight: 500;
+    min-width: 280px;
+  }
+}
+
 .home-image-slider-section {
-  padding: 60px 0;
+  margin: 60px 0;
 }
 
 .home-image-slider-section .home-slider-carousel {
@@ -1444,6 +1562,49 @@ footer .copyright-section .site-name {
   stroke-width: 9.375;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+@media (max-width: 767px) {
+  .home-image-slider-section {
+    margin: 55px 0;
+  }
+
+  .home-image-slider-section .container {
+    padding: 0;
+  }
+
+  .home-image-slider-section .carousel-cell {
+    width: 80%;
+  }
+
+  .home-image-slider-section a {
+    min-height: 280px;
+    max-height: 280px;
+  }
+
+  .home-image-slider-section a h2 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .home-image-slider-section a .text-content {
+    width: 100%;
+  }
+
+  .home-image-slider-section .title-part {
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+
+  .home-image-slider-section .container {
+    padding: 0;
+  }
+
+  .home-image-slider-section .flickity-button {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 .our-stores-section {

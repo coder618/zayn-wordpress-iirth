@@ -24,8 +24,6 @@
 
 <section class="product-listing">
 
-
-
     <div class="container">
         <div class="content">
             <div class="title-part">
@@ -58,3 +56,21 @@
 
 
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.product-listing .product-items');
+    elems.forEach(function(elem) {
+        if (typeof Flickity !== 'undefined') {
+            new Flickity(elem, {
+                watchCSS: true,
+                cellAlign: 'center',
+                contain: true,
+                wrapAround: true,
+                pageDots: false,
+                prevNextButtons: false
+            });
+        }
+    });
+});
+</script>

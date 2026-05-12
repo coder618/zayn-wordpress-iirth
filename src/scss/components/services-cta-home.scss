@@ -1,8 +1,18 @@
 .services-cta-home-section {
+    margin: 64px 0;
     .cta-items {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
+
+        @media (max-width: 767px) {
+            display: block;
+
+            &:after {
+                content: "flickity";
+                display: none;
+            }
+        }
     }
 
     .cta-item {
@@ -31,6 +41,18 @@
             line-height: 20px;
             z-index: 2;
             position: relative;
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin: 40px 0;
+
+        .cta-item {
+            width: 80%;
+            margin-right: 16px;
+        }
+        .container {
+            padding: 0;
         }
     }
 }

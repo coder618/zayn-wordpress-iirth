@@ -1,5 +1,5 @@
 .home-image-slider-section {
-    padding: 60px 0;
+    margin: 60px 0;
 
     .home-slider-carousel {
         width: 100%;
@@ -70,6 +70,42 @@
             stroke-width: 9.375;
             stroke-linecap: round;
             stroke-linejoin: round;
+        }
+    }
+
+    @media (max-width: 767px) {
+        margin: 55px 0;
+
+        .container {
+            padding: 0;
+        }
+        .carousel-cell {
+            width: 80%;
+        }
+        a {
+            min-height: 280px;
+            max-height: 280px;
+            h2 {
+                font-size: 20px;
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+            .text-content {
+                width: 100%;
+            }
+        }
+        .title-part {
+            padding: 0 20px;
+            justify-content: space-between;
+        }
+        .container {
+            padding: 0;
+        }
+        .flickity-button {
+            width: 32px;
+            height: 32px;
+            svg {
+            }
         }
     }
 }
