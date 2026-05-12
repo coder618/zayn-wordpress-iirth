@@ -216,4 +216,47 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/our-craftsmanship' );
         } );
+
+    Block::make( __( 'Product Listing', 'ahadul' ) )
+        ->set_icon( 'store' )
+        ->set_description( __( 'A product listing block with title, button, and selected products.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'product' ), __( 'listing' ), __( 'shop' ) ] )
+        ->add_fields( array(
+            Field::make( 'text', 'title', __( 'Title', 'ahadul' ) ),
+            Field::make( 'text', 'btn_title', __( 'Button Title', 'ahadul' ) ),
+            Field::make( 'text', 'btn_link', __( 'Button Link', 'ahadul' ) ),
+            Field::make( 'multiselect', 'product_ids', __( 'Products', 'ahadul' ) )
+                ->set_options( function() {
+                    $options = array();
+                    $products = get_posts( array(
+                        'post_type'   => 'product',
+                        'post_status' => 'publish',
+                        'numberposts' => -1,
+                    ) );
+                    
+                    if ( ! empty( $products ) ) {
+                        foreach ( $products as $product ) {
+                            $options[ $product->ID ] = $product->post_title;
+                        }
+                    }
+                    
+                    return $options;
+                } )
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            $product_ids = [];
+            if ( ! empty( $fields['product_ids'] ) && is_array( $fields['product_ids'] ) ) {
+                $product_ids = $fields['product_ids'];
+            }
+
+            set_query_var( 'product_listing', array(
+                'title'        => $fields['title'] ?? '',
+                'has_shop_btn' => ! empty( $fields['btn_title'] ) || ! empty( $fields['btn_link'] ),
+                'product_ids'  => $product_ids,
+                'btn_title'    => $fields['btn_title'] ?? '',
+                'btn_link'     => $fields['btn_link'] ?? '',
+            ) );
+            get_template_part( 'components/product-listing' );
+        } );
 }
