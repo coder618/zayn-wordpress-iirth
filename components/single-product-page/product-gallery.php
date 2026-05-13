@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             wrapAround: true,
             pageDots: false,
             prevNextButtons: true,
+            adaptiveHeight: true,
             imagesLoaded: true,
             arrowShape: 'M79.17 50L20.83 50M50 20.83L20.83 50L50 79.17'
         });

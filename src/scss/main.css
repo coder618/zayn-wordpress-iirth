@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "D-DIN";
   src: url("../fonts/d-din-font-family/D-DIN.woff2") format("woff2"), url("../fonts/d-din-font-family/D-DIN.woff") format("woff"), url("../fonts/d-din-font-family/D-DIN.ttf") format("truetype");
@@ -769,6 +770,10 @@ footer .copyright-section .site-name {
 @media (max-width: 767px) {
   .product-listing h2 {
     font-size: 20px;
+    line-height: 24px;
+  }
+  .product-listing .product-item {
+    max-width: 220px;
   }
   .product-listing .title-part {
     padding: 0 20px;
@@ -783,15 +788,24 @@ footer .copyright-section .site-name {
 .each-product-card {
   text-align: center;
   max-width: 280px;
+  min-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.each-product-card .img-wrapper {
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+}
 .each-product-card img {
   width: 100% !important;
-  margin-bottom: 20px;
-  height: 280px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   object-fit: cover;
 }
 .each-product-card h4 {
@@ -1031,14 +1045,9 @@ footer .copyright-section .site-name {
   gap: 53px;
   align-items: flex-start;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .other-treatment .treatment-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .other-treatment .treatment-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -2222,8 +2231,61 @@ footer .copyright-section .site-name {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 767px) {
+  .single-treatment-page .top-part-gallery-title-with-detail {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-top: 48px;
+  }
+  .single-treatment-page .top-part-gallery-title-with-detail .title-and-price {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .single-treatment-page .top-part-gallery-title-with-detail .title-and-price h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .single-treatment-page .top-part-gallery-title-with-detail .right-part .content {
+    padding: 0;
+    border: 0;
+    height: unset;
+  }
+  .single-treatment-page .single-product-carousel {
+    width: 100%;
+    height: auto;
+  }
+  .single-treatment-page .single-product-carousel .s-item img {
+    height: auto;
+  }
+  .single-treatment-page .product-key-ingredients {
+    padding: 0;
+    margin: 56px 0;
+  }
+  .single-treatment-page .product-key-ingredients h2 {
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .single-treatment-page .product-key-ingredients .items {
+    grid-template-columns: 1fr;
+  }
+  .single-treatment-page .product-key-ingredients img {
+    margin-bottom: 40px;
+  }
+  .single-treatment-page .product-key-ingredients h2 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+}
 .single-treatment-page .product-listing-wrapper {
   margin-top: 160px;
+}
+@media (max-width: 767px) {
+  .single-treatment-page .product-listing-wrapper {
+    margin-top: 56px;
+  }
 }
 
 .single-product-page .top-part-gallery-title-with-detail {
@@ -2348,6 +2410,7 @@ footer .copyright-section .site-name {
   .single-product-page .top-part-gallery-title-with-detail {
     grid-template-columns: 1fr;
     gap: 48px;
+    margin-top: 48px;
   }
   .single-product-page .top-part-gallery-title-with-detail .title-and-price {
     flex-direction: column;
@@ -2506,6 +2569,163 @@ body {
   body {
     padding-top: 112px;
   }
+}
+
+.woocommerce-notices-wrapper {
+  max-width: 1320px;
+  margin: 30px auto 0px auto;
+  padding-inline: 20px;
+  font-family: var(--font-body);
+}
+.woocommerce-notices-wrapper .woocommerce-message,
+.woocommerce-notices-wrapper .woocommerce-error,
+.woocommerce-notices-wrapper .woocommerce-info {
+  padding: 8px 24px 8px 50px;
+  margin-bottom: 10px;
+  list-style: none;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  position: relative;
+}
+.woocommerce-notices-wrapper .woocommerce-message::after,
+.woocommerce-notices-wrapper .woocommerce-error::after,
+.woocommerce-notices-wrapper .woocommerce-info::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.woocommerce-notices-wrapper .woocommerce-message li,
+.woocommerce-notices-wrapper .woocommerce-error li,
+.woocommerce-notices-wrapper .woocommerce-info li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .woocommerce-notices-wrapper .woocommerce-message li,
+  .woocommerce-notices-wrapper .woocommerce-error li,
+  .woocommerce-notices-wrapper .woocommerce-info li {
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+  }
+}
+.woocommerce-notices-wrapper .woocommerce-message a,
+.woocommerce-notices-wrapper .woocommerce-error a,
+.woocommerce-notices-wrapper .woocommerce-info a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 600;
+}
+.woocommerce-notices-wrapper .woocommerce-message a:hover,
+.woocommerce-notices-wrapper .woocommerce-error a:hover,
+.woocommerce-notices-wrapper .woocommerce-info a:hover {
+  text-decoration: none;
+}
+.woocommerce-notices-wrapper .woocommerce-message a.button,
+.woocommerce-notices-wrapper .woocommerce-error a.button,
+.woocommerce-notices-wrapper .woocommerce-info a.button {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 8px 20px;
+  font-family: var(--font-heading);
+  margin: 0;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+.woocommerce-notices-wrapper .woocommerce-message a.button:hover,
+.woocommerce-notices-wrapper .woocommerce-error a.button:hover,
+.woocommerce-notices-wrapper .woocommerce-info a.button:hover {
+  background-color: var(--color-accent);
+  text-decoration: none;
+}
+.woocommerce-notices-wrapper .woocommerce-message::before,
+.woocommerce-notices-wrapper .woocommerce-error::before,
+.woocommerce-notices-wrapper .woocommerce-info::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+.woocommerce-notices-wrapper ul.woocommerce-error {
+  padding: 10px 24px 10px 60px;
+  position: relative;
+}
+.woocommerce-notices-wrapper ul.woocommerce-error::before {
+  content: "!";
+  position: absolute;
+  left: 20px;
+  top: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background-color: #dc2626;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+.woocommerce-notices-wrapper ul.woocommerce-error li {
+  list-style: none;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 32px;
+  position: relative;
+}
+.woocommerce-notices-wrapper ul.woocommerce-error li:last-child {
+  margin-bottom: 0;
+}
+.woocommerce-notices-wrapper .woocommerce-message {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  border-left: 4px solid #16a34a;
+}
+.woocommerce-notices-wrapper .woocommerce-message::before {
+  content: "✓";
+  background-color: #16a34a;
+}
+.woocommerce-notices-wrapper .woocommerce-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  border-left: 4px solid #dc2626;
+}
+.woocommerce-notices-wrapper .woocommerce-error:not(ul) {
+  padding-left: 60px;
+}
+.woocommerce-notices-wrapper .woocommerce-error:not(ul)::before {
+  content: "!";
+  background-color: #dc2626;
+}
+.woocommerce-notices-wrapper .woocommerce-info {
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+  border-left: 4px solid #2563eb;
+}
+.woocommerce-notices-wrapper .woocommerce-info::before {
+  content: "i";
+  background-color: #2563eb;
+  font-style: italic;
+  font-family: serif;
 }
 
 @layer base {

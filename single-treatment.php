@@ -41,7 +41,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                         <h1><?php echo get_the_title(); ?></h1>
                         <?php if ( $price ) : ?>
                         <div class="price-wrapper">
-                            <?php echo esc_html( $price ); ?>
+                            £<?php echo esc_html( $price ); ?>
                         </div>
                         <?php endif; ?>
                     </div>
@@ -65,11 +65,12 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             </div>
 
         </div>
+    </div>
 
 
-        <div class="product-listing-wrapper">
+    <div class="product-listing-wrapper">
 
-            <?php 
+        <?php 
             if ( ! empty( $used_products ) && is_array( $used_products ) ) {
                 // $product_ids = array_column( $used_products, 'id' );
                 
@@ -81,17 +82,19 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                 
                 get_template_part( 'components/product-listing' );
 
+                
+
                 get_template_part( 'components/other-treatment' );
 
 
             } 
             
         ?>
-        </div>
-
-
-
     </div>
+
+
+
+</div>
 
 </div>
 

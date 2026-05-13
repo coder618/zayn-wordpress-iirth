@@ -16,13 +16,15 @@ if (empty($related_treatments)) {
 ?>
 
 <section class="other-treatment">
-    <div class="content">
-        <h2>OTHER TREATMENTS</h2>
+    <div class="container">
+        <div class="content">
+            <h2>OTHER TREATMENTS</h2>
 
-        <div class="treatment-grid">
-            <?php foreach ($related_treatments as $treatment) : ?>
-            <?php get_template_part('loop-templates/treatment', null, array('id' => $treatment->ID)); ?>
-            <?php endforeach; ?>
+            <div class="treatment-grid">
+                <?php foreach ($related_treatments as $treatment) : ?>
+                <?php get_template_part('loop-templates/treatment', null, array('id' => $treatment->ID)); ?>
+                <?php endforeach; ?>
+            </div>
         </div>
     </div>
 </section>
