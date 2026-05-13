@@ -144,7 +144,7 @@
 }
 
 @media (min-width: 1024px) {
-  .desktop-header.headroom--not-top {
+  .desktop-header.headroom--unpinned {
     top: -40px;
   }
 }
