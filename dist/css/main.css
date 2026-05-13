@@ -3902,6 +3902,16 @@ video {
   transition-duration: 150ms;
 }
 
+body {
+  padding-top: 120px;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 112px;
+  }
+}
+
 /* Add your custom SCSS here */
 
 body {

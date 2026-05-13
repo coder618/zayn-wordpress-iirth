@@ -2499,6 +2499,15 @@ footer .copyright-section .site-name {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+  padding-top: 120px;
+}
+@media (max-width: 767px) {
+  body {
+    padding-top: 112px;
+  }
+}
+
 @layer base {
   :root {
     --color-primary: #006d57;

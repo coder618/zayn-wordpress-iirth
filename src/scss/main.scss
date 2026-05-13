@@ -28,6 +28,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    padding-top: 120px;
+    @media (max-width: 767px) {
+        padding-top: 112px;
+    }
+}
 @layer base {
     :root {
         --color-primary: #006d57;
