@@ -1,8 +1,10 @@
 # To do
 
-1. Update the pattern
-2. Test the Jump link
-3. gallery open the image in modal
+1. Develop a home page component
+
+2. Update the pattern
+3. Test the Jump link
+
 4. footer fix mobile
 
 5. btn fix nav bar

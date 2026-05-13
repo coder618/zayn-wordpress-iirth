@@ -7,12 +7,13 @@
 
 
         <!-- Logo -->
-        <div class="flex justify-center mb-12 md:mb-16">
+        <div class="footer-logo-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/dist/icons/footer-logo.png" alt="zayn logo">
         </div>
 
         <!-- Menus -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 text-center mb-16 md:mb-24">
+        <div class="footer-link-list">
+
             <!-- Shop & Book -->
             <div>
                 <h3>Shop & Book</h3>
@@ -21,7 +22,7 @@
                     wp_nav_menu( array(
                         'theme_location' => 'footer_1',
                         'container'      => false,
-                        'menu_class'     => 'flex flex-col space-y-4 font-body text-primary uppercase tracking-wider text-sm font-semibold [&_a]:hover:opacity-70 [&_a]:transition-opacity',
+                        'menu_class'     => '',
                         'fallback_cb'    => false,
                     ) );
                 }
@@ -38,7 +39,7 @@
                     wp_nav_menu( array(
                         'theme_location' => 'footer_2',
                         'container'      => false,
-                        'menu_class'     => 'flex flex-col space-y-4 font-body text-primary uppercase tracking-wider text-sm font-semibold [&_a]:hover:opacity-70 [&_a]:transition-opacity',
+                        'menu_class'     => '',
                         'fallback_cb'    => false,
                     ) );
                 }
@@ -54,7 +55,7 @@
                     wp_nav_menu( array(
                         'theme_location' => 'footer_3',
                         'container'      => false,
-                        'menu_class'     => 'flex flex-col space-y-4 font-body text-primary uppercase tracking-wider text-sm font-semibold [&_a]:hover:opacity-70 [&_a]:transition-opacity',
+                        'menu_class'     => '',
                         'fallback_cb'    => false,
                     ) );
                 }
