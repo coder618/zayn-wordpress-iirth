@@ -81,14 +81,14 @@
                     <?php
                     $phone = carbon_get_theme_option( 'site_phone_number' );
                     if ( ! empty( $phone ) ) {
-                        echo '<div>T: ' . esc_html( $phone ) . '</div>';
+                        echo '<a href="tel:' . esc_attr( str_replace( ' ', '', $phone ) ) . '">T: ' . esc_html( $phone ) . '</a>';
                     }
                 ?>
 
                 </div>
 
                 <div class="right-part">
-                    SITE BY IIRTH
+                    <a href="https://theiirthcompany.com/" target="_blank">SITE BY IIRTH</a>
                 </div>
 
             </div>

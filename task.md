@@ -1,15 +1,15 @@
 # To do
 
 1. Develop a home page component
+2. Tab version fix for home
+3. cart and checkout page fixed
+4. fix menu speacing in the desktop and tabs
 
-2. Update the pattern
-3. Test the Jump link
+5. Mega menu link in shop page working check for category support
+6. Test the Jump link
 
-4. footer fix mobile
+7. btn fix nav bar
+8. change pic when hover
 
-5. btn fix nav bar
-6. change pic when hover
-
-7. fix menu speacing in the desktop and tabs
-8. Add icon in the add to busket button
-9. add icon in booking now button
+9. Add icon in the add to busket button
+10. add icon in booking now button

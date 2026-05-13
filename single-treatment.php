@@ -2,6 +2,7 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+$arrow_svg = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 6H9.5" stroke="#006D57" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 2.5L9.5 6L6 9.5" stroke="#006D57" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
 get_header();
 if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -53,8 +54,10 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
                     <?php if ( $booking_link ) : ?>
                     <div class="booking-btn-wrapper">
                         <!-- add booking link  -->
-                        <a class="booking-btn" target="_blank"
-                            href="<?php echo esc_url( $booking_link ); ?>">Booking</a>
+                        <a class="booking-btn" el="noopener noreferrer" target="_blank"
+                            href="<?php echo esc_url( $booking_link ); ?>">Booking
+                            <span><?php echo $arrow_svg ?></span>
+                        </a>
                     </div>
                     <?php endif; ?>
 
