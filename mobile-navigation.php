@@ -98,6 +98,40 @@ $calendar_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    const mobileHeader = document.querySelector('.mobile-header');
+    const topMessage = document.querySelector('.mobile-header .top-message');
+
+    if (mobileHeader && typeof Headroom !== 'undefined') {
+        const topMessageHeight = topMessage ? topMessage.offsetHeight : 0;
+
+        const headroom = new Headroom(mobileHeader, {
+            offset: 200,
+            tolerance: 5,
+            classes: {
+                initial: "animated",
+                pinned: "slideDown",
+                unpinned: "slideUp",
+                top: "headroom--top",
+                notTop: "headroom--not-top",
+                bottom: "headroom--bottom",
+                notBottom: "headroom--not-bottom"
+            },
+            onUnpin: function() {
+                if (topMessageHeight > 0) {
+                    mobileHeader.style.transform = `translateY(-${topMessageHeight}px)`;
+                }
+            },
+            onPin: function() {
+                mobileHeader.style.transform = 'translateY(0)';
+            },
+            onTop: function() {
+                mobileHeader.style.transform = 'translateY(0)';
+            }
+        });
+
+        headroom.init();
+    }
+
     const toggleBtn = document.querySelector('.mobile-menu-toggle');
     const closeBtn = document.querySelector('.mobile-menu-close');
     const mobileMenu = document.querySelector('.mobile-nav-menu');

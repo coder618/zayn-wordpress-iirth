@@ -328,6 +328,7 @@
   z-index: 60;
   background-color: #fff;
   border-bottom: 1px solid var(--color-gray);
+  transition: transform 0.3s ease;
 }
 .mobile-header .top-message {
   font-size: 11px;
