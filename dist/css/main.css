@@ -423,7 +423,22 @@
   border-bottom: 1px solid var(--color-gray);
 }
 
-@media (min-width: 1024px) {
+.mobile-header .top-message {
+  font-size: 11px;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+  background-color: var(--color-accent);
+  color: #fff;
+  text-align: center;
+  padding: 8px 10px;
+  font-family: var(--font-body);
+}
+
+@media (min-width: 768px) {
   .mobile-header {
     display: none;
   }

@@ -36,6 +36,11 @@ function crb_attach_theme_options() {
                 ->set_rows( 4 )
                 ->set_help_text( 'This message can be shown in the site banner.' ),
 
+
+            Field::make( 'text', 'booking_page_link', 'Booking Page Link' )
+                ->set_help_text( 'Enter the site booking page link.' ),
+
+
         ) );
 
     Container::make( 'theme_options', __( 'Navigation', 'zayn' ) )

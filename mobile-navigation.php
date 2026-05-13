@@ -6,6 +6,14 @@ $calendar_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 ?>
 
 <div class="mobile-header">
+    <div class="top-message">
+        <?php
+        $banner_message = carbon_get_theme_option('site_banner_message');
+        if (!empty($banner_message)) {
+            echo esc_html($banner_message);
+        }
+        ?>
+    </div>
     <div class="mobile-top-bar">
         <!-- Hamburger Icon -->
         <button class="mobile-menu-toggle" aria-label="Toggle menu">
