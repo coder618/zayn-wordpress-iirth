@@ -10,6 +10,3 @@
 
 7. btn fix nav bar
 8. change pic when hover
-
-9. Add icon in the add to busket button
-10. add icon in booking now button

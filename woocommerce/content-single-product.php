@@ -31,7 +31,6 @@ if ( post_password_required() ) {
 	return;
 }
 
-
 ?>
 <div class="single-product-page" id="product-<?php the_ID(); ?>"
     <?php wc_product_class( 'grid grid-cols-1 lg:grid-cols-2 gap-12', $product ); ?>>

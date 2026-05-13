@@ -2529,6 +2529,13 @@ footer .copyright-section .site-name {
   font-family: var(--font-body);
   text-align: left;
   padding: 10px 20px;
+  display: inline-flex;
+  border-radius: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.single-product-page .add-to-cart-btn-wrapper .single_add_to_cart_button path {
+  stroke: #fff;
 }
 .single-product-page .anchor-links-wrapper {
   display: flex;
