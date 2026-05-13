@@ -13,9 +13,6 @@ $calendar_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                 </path>
             </svg>
-            <svg class="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display:none;">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
         </button>
 
         <!-- Logo -->
@@ -46,6 +43,14 @@ $calendar_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
     ?>
 
     <div class="mobile-nav-menu">
+        <div class="mobile-nav-header">
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
         <ul class="mobile-nav-list">
             <?php foreach ($menu_items as $item) : ?>
             <?php 
@@ -86,23 +91,18 @@ $calendar_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const toggleBtn = document.querySelector('.mobile-menu-toggle');
+    const closeBtn = document.querySelector('.mobile-menu-close');
     const mobileMenu = document.querySelector('.mobile-nav-menu');
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-    const closeIcon = document.querySelector('.close-icon');
 
-    if (toggleBtn && mobileMenu) {
+    if (toggleBtn && mobileMenu && closeBtn) {
         toggleBtn.addEventListener('click', function() {
-            const isOpen = mobileMenu.classList.toggle('is-open');
+            mobileMenu.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        });
 
-            if (isOpen) {
-                hamburgerIcon.style.display = 'none';
-                closeIcon.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            } else {
-                hamburgerIcon.style.display = 'block';
-                closeIcon.style.display = 'none';
-                document.body.style.overflow = '';
-            }
+        closeBtn.addEventListener('click', function() {
+            mobileMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
         });
     }
 

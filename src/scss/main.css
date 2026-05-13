@@ -383,18 +383,40 @@
 }
 .mobile-header .mobile-nav-menu {
   position: fixed;
-  top: 60px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: calc(100vh - 60px);
-  background-color: #fff;
+  height: 100vh;
+  background-color: var(--color-gray);
   overflow-y: auto;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
-  z-index: 55;
+  z-index: 70;
 }
 .mobile-header .mobile-nav-menu.is-open {
   transform: translateX(0);
+}
+.mobile-header .mobile-nav-header {
+  display: flex;
+  justify-content: flex-end;
+  height: 72px;
+  border-bottom: 1px solid #d5d1cf;
+}
+.mobile-header .mobile-menu-close {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-left: 1px solid #d5d1cf;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+.mobile-header .mobile-menu-close svg {
+  width: 28px;
+  height: 28px;
 }
 .mobile-header .mobile-nav-list {
   list-style: none;
@@ -402,20 +424,22 @@
   padding: 0;
 }
 .mobile-header .mobile-nav-item {
-  border-bottom: 1px solid var(--color-gray);
+  border-bottom: 1px solid #d5d1cf;
 }
 .mobile-header .mobile-nav-link-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 22px 20px;
 }
 .mobile-header .mobile-nav-link {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
-  color: var(--color-primary);
+  line-height: 1.2;
+  font-family: var(--font-heading);
+  color: var(--color-accent);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 10%;
   text-decoration: none;
   flex: 1;
 }
@@ -438,20 +462,25 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  background-color: #f9fafb;
   display: none;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+}
+.mobile-header .mobile-nav-item.submenu-open {
+  background-color: #dad6d4;
+}
+.mobile-header .mobile-nav-item.submenu-open {
+  border-bottom: 0 !important;
 }
 .mobile-header .mobile-nav-item.submenu-open .mobile-submenu {
-  display: block;
-}
-.mobile-header .mobile-submenu-item {
-  border-top: 1px solid var(--color-gray);
+  display: grid;
 }
 .mobile-header .mobile-submenu-link {
   display: block;
-  padding: 0.75rem 1rem 0.75rem 2rem;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--color-primary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
