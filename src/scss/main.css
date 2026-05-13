@@ -983,7 +983,7 @@ footer .copyright-section .site-name {
   padding: 32px 32px 58px 32px;
   background-color: #eeebe6;
 }
-.treatment-card .treatment-content .treatment-title {
+.treatment-card .treatment-title {
   margin: 0 0 1rem 0;
   font-size: 20px;
   font-weight: 600;
@@ -992,14 +992,14 @@ footer .copyright-section .site-name {
   color: #051c18;
   text-transform: uppercase;
 }
-.treatment-card .treatment-content .treatment-description {
+.treatment-card .treatment-description {
   color: var(--color-primary);
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 5%;
   text-transform: uppercase;
 }
-.treatment-card .treatment-content .treatment-description p {
+.treatment-card .treatment-description p {
   margin: 0;
 }
 .treatment-card .treatment-actions {
@@ -1025,6 +1025,18 @@ footer .copyright-section .site-name {
 .treatment-card .treatment-actions a:first-child {
   border-right: 1px solid #ffffff;
 }
+@media (max-width: 768px) {
+  .treatment-card .treatment-content {
+    padding: 32px;
+  }
+  .treatment-card .treatment-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .treatment-card .treatment-description {
+    font-size: 14px;
+  }
+}
 
 .other-treatment {
   padding: 5rem 0;
@@ -1034,9 +1046,9 @@ footer .copyright-section .site-name {
   text-align: left;
   font-weight: 600;
   margin-bottom: 64px;
-  font-size: 2rem;
   letter-spacing: 0.1em;
   color: #051c18;
+  font-size: 28px;
   text-transform: uppercase;
 }
 .other-treatment .treatment-grid {
@@ -1050,6 +1062,17 @@ footer .copyright-section .site-name {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+@media (max-width: 768px) {
+  .other-treatment h2 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 32px;
+  }
+  .other-treatment .treatment-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
 
 .treatment-page-banner {
   position: relative;
@@ -1057,6 +1080,7 @@ footer .copyright-section .site-name {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 288px;
 }
 .treatment-page-banner .overlay-wrapper {
   position: absolute;
@@ -1098,13 +1122,28 @@ footer .copyright-section .site-name {
   line-height: 28px;
   color: #051c18;
   letter-spacing: 10%;
-  margin-bottom: 32px;
 }
 .treatment-page-banner .detail {
   font-size: 14px;
   line-height: 24px;
   color: var(--color-primary);
   letter-spacing: 5%;
+  margin-top: 32px;
+}
+@media (max-width: 768px) {
+  .treatment-page-banner {
+    padding: 32px 20px;
+    min-height: 224px;
+  }
+  .treatment-page-banner h1 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .treatment-page-banner .detail {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 24px;
+  }
 }
 
 .all-treatment-display-section {
@@ -1124,6 +1163,11 @@ footer .copyright-section .site-name {
 @media (max-width: 768px) {
   .all-treatment-display-section .items {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .all-treatment-display-section {
+    margin: 56px 0;
   }
 }
 
