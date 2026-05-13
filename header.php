@@ -11,3 +11,4 @@
     <?php wp_body_open(); ?>
     <div id="page-content" class="site-content">
         <?php get_template_part('main-navigation'); ?>
+        <?php get_template_part('mobile-navigation'); ?>
