@@ -251,7 +251,7 @@
   display: flex;
   gap: 64px;
   justify-content: flex-start;
-  background-color: #f8f8f8;
+  background-color: #f4f4f4;
 }
 .desktop-header .mega-menu-product {
   display: block;
@@ -559,6 +559,21 @@ footer .copyright-section .left-part {
 footer .copyright-section .site-name {
   margin-right: 48px;
 }
+@media (max-width: 768px) {
+  footer .copyright-section .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  footer .copyright-section .site-name {
+    margin: 0 !important;
+  }
+  footer .copyright-section .left-part {
+    gap: 12px;
+    flex-direction: column;
+  }
+}
 
 .home-banner-section .banner-items {
   display: grid;
@@ -598,16 +613,17 @@ footer .copyright-section .site-name {
   display: inline-flex;
   align-items: center;
   line-height: 22px;
+  transition: all 0.2s ease;
 }
 .home-banner-section .banner-item a span {
   margin-left: 10px;
 }
 .home-banner-section .banner-item a:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   color: #fff;
 }
 .home-banner-section .banner-item a:hover path {
-  fill: #fff;
+  stroke: #fff;
 }
 .home-banner-section .banner-item .img-wrapper {
   position: absolute;
@@ -1902,7 +1918,7 @@ footer .copyright-section .site-name {
 }
 
 .home-image-slider-section {
-  margin: 60px 0;
+  margin: 100px 0;
 }
 .home-image-slider-section .home-slider-carousel {
   width: 100%;

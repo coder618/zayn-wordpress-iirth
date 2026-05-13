@@ -5,7 +5,7 @@
 
 $fields = get_query_var( 'block_data' );
 $items  = $fields['home_banner_items'] ?? [];
-$arrow_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path stroke="#006d57" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.33" d="M2.5 6h7M6 2.5 9.5 6 6 9.5"/></svg>';
+$arrow_svg = '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 6H9.5" stroke="#006D57" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 2.5L9.5 6L6 9.5" stroke="#006D57" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
 ?>
 
