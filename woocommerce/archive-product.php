@@ -11,8 +11,8 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-if ( is_shop() && ! is_product_category() && ! is_product_tag() ) {
-    // We are on the main shop page
+if ( ( is_shop() || is_product_category() || is_product_tag() ) ) {
+    // We are on the main shop page or a category/tag page
     $shop_page_id = wc_get_page_id( 'shop' );
     if ( $shop_page_id ) {
         $shop_page = get_post( $shop_page_id );

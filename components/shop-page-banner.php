@@ -8,6 +8,18 @@ $fields = get_query_var( 'block_data' );
 $title  = $fields['title'] ?? '';
 $detail = $fields['detail'] ?? '';
 $image  = $fields['image'] ?? '';
+
+if ( is_product_category() || is_product_tag() ) {
+    $queried_object = get_queried_object();
+    if ( $queried_object && is_a( $queried_object, 'WP_Term' ) ) {
+        $title = $queried_object->name;
+        if ( ! empty( $queried_object->description ) ) {
+            $detail = $queried_object->description;
+        } else {
+            $detail = ''; // Clear default shop description if category has none
+        }
+    }
+}
 ?>
 
 <section class="shop-page-banner ">

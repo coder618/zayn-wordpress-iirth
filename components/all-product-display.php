@@ -13,6 +13,21 @@ $args = array(
     'posts_per_page' => -1, // Display all products
 );
 
+if ( is_product_category() || is_product_tag() ) {
+    $queried_object = get_queried_object();
+    if ( $queried_object && is_a( $queried_object, 'WP_Term' ) ) {
+        $args['tax_query'] = array(
+            array(
+                'taxonomy' => $queried_object->taxonomy,
+                'field'    => 'term_id',
+                'terms'    => $queried_object->term_id,
+            ),
+        );
+        // Optionally override title with category/tag name
+        // $title = $queried_object->name;
+    }
+}
+
 $products_query = new WP_Query( $args );
 ?>
 
