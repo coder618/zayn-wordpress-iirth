@@ -3248,8 +3248,8 @@ footer .copyright-section .site-name {
 .woocommerce-checkout .title-wrapper,
 .woocommerce-order .title-wrapper {
   text-align: center;
-  background-color: #f9f9f9;
-  border: 1px solid var(--color-gray);
+  background-color: var(--color-primary);
+  border: 0px solid var(--color-gray);
   padding: 1rem;
   width: 750px;
   max-width: 100%;
@@ -3267,7 +3267,26 @@ footer .copyright-section .site-name {
 .woocommerce-order h1 {
   text-transform: uppercase;
   font-size: 30px;
+  color: #fff;
   line-height: 100px;
+}
+
+.woocommerce-cart h3,
+.woocommerce-checkout h3,
+.woocommerce-order h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+}
+
+@media (max-width: 768px) {
+  .woocommerce-cart .title-wrapper,
+  .woocommerce-checkout .title-wrapper,
+  .woocommerce-order .title-wrapper {
+    margin: 0;
+    border: 0;
+  }
 }
 
 .woocommerce-cart .woocommerce-cart-form .shop_table .actions .coupon,
@@ -3298,17 +3317,38 @@ footer .copyright-section .site-name {
 
 .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout .checkout-button,
 .woocommerce-page .cart-collaterals .cart_totals .wc-proceed-to-checkout .checkout-button {
-  background-color: var(--color-primary);
-  color: var(--color-gray);
-  font-size: 14px;
+  font-size: 14px !important;
+  font-family: var(--font-heading);
+  letter-spacing: 10%;
   border-radius: 0;
   text-transform: uppercase;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  min-height: 50px;
+  margin-top: 20px;
+  background-color: var(--color-primary);
 }
 
 .woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout .checkout-button:hover,
 .woocommerce-page .cart-collaterals .cart_totals .wc-proceed-to-checkout .checkout-button:hover {
   background-color: var(--color-secondary);
-  color: #fff;
+}
+
+/* Cart table fix  */
+
+.woocommerce table.shop_table_responsive tr td,
+.woocommerce-page table.shop_table_responsive tr td {
+  min-height: 43px;
+}
+
+/* Checkout button top spacing */
+
+.woocommerce .cart-collaterals .cart_totals .wc-proceed-to-checkout,
+.woocommerce-page .cart-collaterals .cart_totals .wc-proceed-to-checkout {
+  margin-top: 0 !important;
 }
 
 /* Apply coupon btn */
@@ -3386,7 +3426,7 @@ footer .copyright-section .site-name {
 .woocommerce-page .cart-collaterals .cart_totals table th {
   border: 0 !important;
   font-weight: normal;
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .woocommerce .cart-collaterals .cart_totals table td,
@@ -3404,6 +3444,56 @@ footer .copyright-section .site-name {
 .woocommerce-page .cart-collaterals .cart_totals .wc-proceed-to-checkout .checkout-button {
   width: 100%;
   display: block;
+}
+
+/* ============ Single column checkout =========  */
+
+.woocommerce-checkout .col2-set .col-1,
+.woocommerce-checkout .col2-set .col-2 {
+  float: none !important;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+
+.woocommerce-checkout form.checkout .form-row-first,
+.woocommerce-checkout form.checkout .form-row-last {
+  float: none !important;
+  width: 100% !important;
+}
+
+.woocommerce form .form-row label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+}
+
+:where(.woocommerce) .select2-container .select2-dropdown,
+:where(.woocommerce) .select2-container .select2-selection,
+.woocommerce form .form-row .input-text,
+.woocommerce form .form-row select {
+  color: #fff;
+  border: 1px solid var(--color-gray);
+  border-radius: 0;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.woocommerce #payment #place_order,
+.woocommerce-page #payment #place_order {
+  font-size: 16px !important;
+  font-family: var(--font-heading);
+  letter-spacing: 10%;
+  border-radius: 0;
+  text-transform: uppercase;
+  width: 100%;
+  min-height: 50px;
+  margin-top: 20px;
+  background-color: var(--color-primary);
+}
+
+.woocommerce #payment #place_order:hover,
+.woocommerce-page #payment #place_order:hover {
+  background-color: var(--color-secondary);
 }
 
 *, ::before, ::after{

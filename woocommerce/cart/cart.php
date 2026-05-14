@@ -24,11 +24,11 @@ defined( 'ABSPATH' ) || exit;
 // ) );
 // get_template_part( 'components/treatment-page-banner' );
 ?>
+<div class="title-wrapper">
+    <h1>Cart</h1>
+</div>
 <div class="container ">
 
-    <div class="title-wrapper">
-        <h1>Cart</h1>
-    </div>
 
 
     <?php do_action( 'woocommerce_before_cart' ); ?>
