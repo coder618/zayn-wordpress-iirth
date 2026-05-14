@@ -27,14 +27,12 @@ echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 
 if ( $product->is_in_stock() ) : ?>
 
-<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-<form class="cart"
-    action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>"
-    method="post" enctype='multipart/form-data'>
-    <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
+		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-    <?php
+		<?php
 		do_action( 'woocommerce_before_add_to_cart_quantity' );
 
 		woocommerce_quantity_input(
@@ -48,19 +46,14 @@ if ( $product->is_in_stock() ) : ?>
 		do_action( 'woocommerce_after_add_to_cart_quantity' );
 		?>
 
-    <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>"
-        class="single_add_to_cart_button button alt<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>">
-        <?php echo esc_html( $product->single_add_to_cart_text() ); ?>
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.5 6H9.5" stroke="#006D57" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M6 2.5L9.5 6L6 9.5" stroke="#006D57" stroke-width="1.33" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </svg>
-    </button>
+		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>">
+			<?php echo esc_html( $product->single_add_to_cart_text() ); ?>
+			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 6H9.5" stroke="#006D57" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 2.5L9.5 6L6 9.5" stroke="#006D57" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/></svg>
+		</button>
 
-    <?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
-</form>
+		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+	</form>
 
-<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
+	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>

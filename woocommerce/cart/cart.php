@@ -18,13 +18,18 @@
 defined( 'ABSPATH' ) || exit;
 
 // Add banner
-set_query_var( 'block_data', array(
-    'title'    => "Cart",
-    'detail'   => '',
-) );
-get_template_part( 'components/treatment-page-banner' );
+// set_query_var( 'block_data', array(
+//     'title'    => "Cart",
+//     'detail'   => '',
+// ) );
+// get_template_part( 'components/treatment-page-banner' );
 ?>
-<div class="container mx-auto px-4 py-12 lg:py-20 max-w-7xl">
+<div class="container ">
+
+    <div class="title-wrapper">
+        <h1>Cart</h1>
+    </div>
+
 
     <?php do_action( 'woocommerce_before_cart' ); ?>
 
