@@ -111,6 +111,17 @@
         top: 0;
         left: 0;
         object-fit: cover;
+        transition: opacity 0.3s ease-in-out;
+
+        &.product-img-hover {
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        img.product-img-hover {
+            opacity: 1;
+        }
     }
     h4 {
         font-size: 16px;

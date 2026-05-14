@@ -1095,6 +1095,15 @@ footer .copyright-section .site-name {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.each-product-card img.product-img-hover {
+  opacity: 0;
+}
+
+.each-product-card:hover img.product-img-hover {
+  opacity: 1;
 }
 
 .each-product-card h4 {
