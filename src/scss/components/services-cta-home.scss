@@ -5,7 +5,8 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
 
-        @media (max-width: 767px) {
+        /* @media (max-width: 767px) { */
+        @media (max-width: 811px) {
             display: block;
 
             &:after {
@@ -44,6 +45,17 @@
         }
     }
 
+    @media (max-width: 811px) {
+        margin: 40px 0;
+
+        .cta-item {
+            width: 320px;
+            margin-right: 16px;
+        }
+        .container {
+            padding: 0;
+        }
+    }
     @media (max-width: 767px) {
         margin: 40px 0;
 

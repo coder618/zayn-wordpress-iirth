@@ -1,3 +1,4 @@
+@use "variables" as *;
 @use "fonts";
 @use "components/main-navigation";
 @use "components/mobile-navigation";
@@ -31,7 +32,7 @@
 
 body {
     padding-top: 120px;
-    @media (max-width: 1023px) {
+    @media (max-width: $tab-breakpoint) {
         padding-top: 112px;
     }
 }
@@ -209,7 +210,7 @@ body {
         --font-body: "D-DIN", sans-serif;
         --font-heading: "Brooklyn", sans-serif;
 
-        --tab-breakpoint: 1023px;
+        --tab-breakpoint: #{$tab-breakpoint};
     }
 }
 

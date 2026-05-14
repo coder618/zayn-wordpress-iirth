@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .mobile-header {
     display: none;
     position: fixed;
@@ -204,7 +206,7 @@
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: $tab-breakpoint) {
     .mobile-header {
         display: block;
     }

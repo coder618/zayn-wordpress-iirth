@@ -37,8 +37,8 @@
         @media (max-width: 1024px) {
             grid-template-columns: repeat(2, 1fr);
         }
-
-        @media (max-width: 767px) {
+        @media (max-width: 811px) {
+            // @media (max-width: 767px) {
             display: block;
 
             &:after {
@@ -53,6 +53,16 @@
                 // width: 80%;
                 // margin-right: 16px;
             }
+        }
+    }
+    @media (max-width: 811px) {
+        margin: 56px 0;
+        .title-part {
+            margin-bottom: 48px;
+            padding: 0 20px;
+        }
+        .container {
+            padding: 0;
         }
     }
 
