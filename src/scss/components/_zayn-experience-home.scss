@@ -78,7 +78,8 @@
         margin-top: 40px;
         a {
             font-weight: 500;
-
+            min-width: 280px;
+            justify-content: space-between;
             display: inline-flex;
             text-align: center;
             padding: 16px 20px;
@@ -105,7 +106,7 @@
     //     }
     // }
 
-    @media (max-width: 811px) {
+    @media (max-width: 1254px) {
         margin: 56px 0;
         .content {
             flex-direction: column-reverse;
