@@ -72,7 +72,18 @@
             stroke-linejoin: round;
         }
     }
-
+    @media (max-width: 810px) {
+        margin: 56px 0;
+        .container {
+            padding: 0;
+        }
+        a {
+            min-height: 280px;
+        }
+        .carousel-cell {
+            width: 35%;
+        }
+    }
     @media (max-width: 767px) {
         margin: 55px 0;
 

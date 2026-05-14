@@ -2296,6 +2296,10 @@ footer .copyright-section .site-name {
 }
 
 @media (max-width: 811px) {
+  .zayn-experience-home {
+    margin: 56px 0;
+  }
+
   .zayn-experience-home .content {
     flex-direction: column-reverse;
     gap: 32px;
@@ -2489,6 +2493,24 @@ footer .copyright-section .site-name {
   stroke-width: 9.375;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+@media (max-width: 810px) {
+  .home-image-slider-section {
+    margin: 56px 0;
+  }
+
+  .home-image-slider-section .container {
+    padding: 0;
+  }
+
+  .home-image-slider-section a {
+    min-height: 280px;
+  }
+
+  .home-image-slider-section .carousel-cell {
+    width: 35%;
+  }
 }
 
 @media (max-width: 767px) {
