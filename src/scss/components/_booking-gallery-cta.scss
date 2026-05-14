@@ -1,0 +1,204 @@
+@use "../variables" as *;
+
+.booking-gallery-cta {
+    position: relative;
+    background-color: #fff;
+    padding: 100px 0; // Space for images to break out
+
+    .bgc-background {
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        left: 0;
+        width: 80%; // The dark background covers 80% of the screen
+        background-image: var(--bg-image);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4); // Darken for text readability
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .bgc-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 500px;
+    }
+
+    .bgc-content {
+        flex: 0 0 45%;
+        max-width: 45%;
+        padding: 40px 0;
+        padding-right: 40px;
+
+        .bgc-title {
+            color: #fff;
+            font-size: 42px;
+            line-height: 1.3;
+            font-weight: 500;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+            letter-spacing: 1px;
+        }
+
+        .bgc-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #f4f3ef; // Off-white color from screenshot
+            color: #1a4a38; // Dark green text
+            padding: 16px 32px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+
+            .icon {
+                margin-left: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                svg {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+
+            &:hover {
+                background-color: #fff;
+                color: #000;
+            }
+        }
+    }
+
+    .bgc-gallery {
+        flex: 0 0 55%;
+        max-width: 55%;
+        position: relative;
+        height: 600px; // Provide a fixed height for absolute positioning
+
+        .bgc-img {
+            position: absolute;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+
+        // Image 1 (Top Right, Shaving Brush)
+        .bgc-img-1 {
+            top: -40px;
+            right: 0;
+            width: 220px;
+            height: 220px;
+            z-index: 2;
+        }
+
+        // Image 2 (Middle Center, Bottle on stand)
+        .bgc-img-2 {
+            top: 20px;
+            right: 180px;
+            width: 300px;
+            height: 450px;
+            z-index: 1;
+        }
+
+        // Image 3 (Bottom Left, Barber Shop interior)
+        .bgc-img-3 {
+            bottom: -60px;
+            right: 380px;
+            width: 240px;
+            height: 300px;
+            z-index: 3;
+        }
+
+        // Image 4 (Bottom Right, Clippers close up)
+        .bgc-img-4 {
+            bottom: -20px;
+            right: 0;
+            width: 240px;
+            height: 320px;
+            z-index: 2;
+        }
+    }
+
+    // Responsive adjustments
+    @media (max-width: $tab-breakpoint) {
+        padding: 60px 0;
+
+        .bgc-background {
+            width: 100%;
+            top: 60px;
+            bottom: 60px;
+        }
+
+        .bgc-wrapper {
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .bgc-content {
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: center;
+            padding-right: 0;
+
+            .bgc-title {
+                font-size: 32px;
+            }
+        }
+
+        .bgc-gallery {
+            flex: 0 0 100%;
+            max-width: 100%;
+            width: 100%;
+            height: 500px;
+
+            .bgc-img-2 {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .bgc-img-3 {
+                left: 0;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .bgc-gallery {
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+
+            .bgc-img {
+                position: relative;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                bottom: auto !important;
+                width: 100% !important;
+                height: 200px !important;
+                transform: none !important;
+            }
+        }
+    }
+}

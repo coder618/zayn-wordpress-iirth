@@ -28,7 +28,14 @@
         width: 100%;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 810px) {
+        padding: 40px 0 70px 0;
+        .flickity-button {
+            display: none;
+        }
+    }
+
+    @media (max-width: 540px) {
         margin: 56px 0 0 0;
         padding: 40px 0 80px 0;
         .container {

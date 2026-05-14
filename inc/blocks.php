@@ -336,4 +336,24 @@ function ahadul_register_custom_blocks() {
             set_query_var( 'block_data', $fields );
             get_template_part( 'components/quote-slider' );
         } );
+
+    Block::make( __( 'Booking Gallery CTA', 'ahadul' ) )
+        ->set_icon( 'tickets-alt' )
+        ->set_description( __( 'A booking CTA block with a large background and a 4-image gallery collage.', 'ahadul' ) )
+        ->set_category( 'design', __( 'Design', 'ahadul' ), 'star-filled' )
+        ->set_keywords( [ __( 'booking' ), __( 'gallery' ), __( 'cta' ) ] )
+        ->add_fields( array(
+            Field::make( 'text', 'title', __( 'Title', 'ahadul' ) ),
+            Field::make( 'text', 'btn_title', __( 'Button Title', 'ahadul' ) ),
+            Field::make( 'text', 'btn_link', __( 'Button Link', 'ahadul' ) ),
+            Field::make( 'image', 'bg_image', __( 'Background Image', 'ahadul' ) ),
+            Field::make( 'image', 'gallery_img_1', __( 'Gallery Image 1 (Top Right)', 'ahadul' ) ),
+            Field::make( 'image', 'gallery_img_2', __( 'Gallery Image 2 (Middle Center)', 'ahadul' ) ),
+            Field::make( 'image', 'gallery_img_3', __( 'Gallery Image 3 (Bottom Left)', 'ahadul' ) ),
+            Field::make( 'image', 'gallery_img_4', __( 'Gallery Image 4 (Bottom Right)', 'ahadul' ) ),
+        ) )
+        ->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
+            set_query_var( 'block_data', $fields );
+            get_template_part( 'components/booking-gallery-cta' );
+        } );
 }
