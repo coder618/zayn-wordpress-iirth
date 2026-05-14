@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="container " style="max-width: 100%; width: 750px;">
     <div class="title-wrapper">
+        <img class="section-bg" src="<?php echo get_template_directory_uri(); ?>/dist/images/pattern.jpg" alt="pattern">
         <h1>CHECKOUT</h1>
     </div>
     <?php

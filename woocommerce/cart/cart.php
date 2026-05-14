@@ -25,6 +25,7 @@ defined( 'ABSPATH' ) || exit;
 // get_template_part( 'components/treatment-page-banner' );
 ?>
 <div class="title-wrapper">
+    <img class="section-bg" src="<?php echo get_template_directory_uri(); ?>/dist/images/pattern.jpg" alt="pattern">
     <h1>Cart</h1>
 </div>
 <div class="container ">
