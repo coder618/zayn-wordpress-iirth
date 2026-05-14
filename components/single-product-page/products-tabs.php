@@ -26,47 +26,50 @@ if ( empty( $product_details ) && empty( $how_to_use ) && empty( $ingredients_de
 <div class="custom-product-tabs-container">
     <div class="tabs-nav">
         <?php if ( ! empty( $product_details ) ) : ?>
-            <button class="tab-btn active" data-tab="tab-details"><?php esc_html_e( 'PRODUCT DETAILS', 'zayn' ); ?></button>
+        <button class="tab-btn active" data-tab="tab-details"><?php esc_html_e( 'PRODUCT DETAILS', 'zayn' ); ?></button>
         <?php endif; ?>
-        
+
         <?php if ( ! empty( $how_to_use ) ) : ?>
-            <button class="tab-btn <?php echo empty( $product_details ) ? 'active' : ''; ?>" data-tab="tab-how-to-use"><?php esc_html_e( 'HOW TO USE', 'zayn' ); ?></button>
+        <button class="tab-btn <?php echo empty( $product_details ) ? 'active' : ''; ?>"
+            data-tab="tab-how-to-use"><?php esc_html_e( 'HOW TO USE', 'zayn' ); ?></button>
         <?php endif; ?>
-        
+
         <?php if ( ! empty( $ingredients_detail ) ) : ?>
-            <button class="tab-btn <?php echo empty( $product_details ) && empty( $how_to_use ) ? 'active' : ''; ?>" data-tab="tab-ingredients"><?php esc_html_e( 'INGREDIENTS', 'zayn' ); ?></button>
+        <button class="tab-btn <?php echo empty( $product_details ) && empty( $how_to_use ) ? 'active' : ''; ?>"
+            data-tab="tab-ingredients"><?php esc_html_e( 'INGREDIENTS', 'zayn' ); ?></button>
         <?php endif; ?>
     </div>
 
     <div class="tabs-content">
         <?php if ( ! empty( $product_details ) ) : ?>
-            <div id="tab-details" class="tab-pane active">
-                <?php echo $product_details; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-            </div>
+        <div id="tab-details" class="tab-pane active">
+            <?php echo $product_details; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+        </div>
         <?php endif; ?>
 
         <?php if ( ! empty( $how_to_use ) ) : ?>
-            <div id="tab-how-to-use" class="tab-pane <?php echo empty( $product_details ) ? 'active' : ''; ?>">
-                <?php echo $how_to_use; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-            </div>
+        <div id="tab-how-to-use" class="tab-pane <?php echo empty( $product_details ) ? 'active' : ''; ?>">
+            <?php echo $how_to_use; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+        </div>
         <?php endif; ?>
 
         <?php if ( ! empty( $ingredients_detail ) ) : ?>
-            <div id="tab-ingredients" class="tab-pane <?php echo empty( $product_details ) && empty( $how_to_use ) ? 'active' : ''; ?>">
-                <?php echo $ingredients_detail; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-            </div>
+        <div id="tab-ingredients"
+            class="tab-pane <?php echo empty( $product_details ) && empty( $how_to_use ) ? 'active' : ''; ?>">
+            <?php echo $ingredients_detail; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+        </div>
         <?php endif; ?>
     </div>
 </div>
 
 <style>
-    
+
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const tabsContainer = document.querySelector('.custom-product-tabs-container');
-    
+
     if (!tabsContainer) return;
 
     const tabButtons = tabsContainer.querySelectorAll('.tab-btn');
@@ -102,17 +105,20 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('data-target-tab');
-            
+
             // Switch tab
             switchTab(targetId);
-            
+
             // Scroll to tabs wrapper
             const tabsWrapper = document.getElementById('products-tabs-wrapper');
             if (tabsWrapper) {
                 // Smooth scroll with some offset for header if needed
-                const yOffset = -50; 
+                const yOffset = -150;
                 const y = tabsWrapper.getBoundingClientRect().top + window.scrollY + yOffset;
-                window.scrollTo({top: y, behavior: 'smooth'});
+                window.scrollTo({
+                    top: y,
+                    behavior: 'smooth'
+                });
             }
         });
     });
