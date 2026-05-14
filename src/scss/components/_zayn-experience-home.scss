@@ -98,20 +98,26 @@
             }
         }
     }
+    // @media (max-width: $tab-breakpoint) {
+    //     .content {
+    //         flex-direction: column-reverse;
+    //         gap: 32px;
+    //     }
+    // }
 
-    @media (max-width: 767px) {
-        margin: 56px 0;
+    @media (max-width: 811px) {
         .content {
             flex-direction: column-reverse;
             gap: 32px;
         }
-
         .image-content {
-            padding: 35px;
             position: relative;
-            max-width: 100%;
-            min-width: 100%;
-            width: 100%;
+            height: 350px;
+            width: 350px;
+            max-height: 350px;
+            min-width: 350px;
+            min-height: 350px;
+            padding: 0;
             .pattern-image {
                 position: absolute;
                 left: 0;
@@ -120,9 +126,60 @@
                 height: 100%;
             }
             .right-image {
+                min-width: unset;
+                position: absolute;
+                left: 35px;
+                top: 35px;
+                width: calc(100% - 70px);
+                max-width: calc(100% - 70px);
+                height: calc(100% - 70px);
+            }
+        }
+        .text-content {
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            h2 {
+                line-height: 1.2;
+                margin-bottom: 32px;
+                font-size: 20px;
+            }
+        }
+        .logo-wrapper {
+            margin-bottom: 32px;
+        }
+        .btn-wrapper {
+            margin-top: 32px;
+        }
+    }
+    // @media (max-width: 811px) {
+    @media (max-width: 540px) {
+        // @media (max-width: $tab-breakpoint) {
+        margin: 56px 0;
+        .content {
+            flex-direction: column-reverse;
+            gap: 32px;
+        }
+
+        .image-content {
+            // padding: 35px;
+            position: relative;
+            max-width: 100%;
+            min-width: 100%;
+            width: 100%;
+            padding-bottom: 98%;
+
+            .pattern-image {
+                position: absolute;
+                left: 0;
+                top: 0;
                 width: 100%;
                 height: 100%;
-                min-width: 100%;
+            }
+            .right-image {
+                // width: 100%;
+                // height: 100%;
+                // min-width: 100%;
             }
         }
         .text-content {
